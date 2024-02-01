@@ -6,7 +6,7 @@ In this microlesson, demonstrate splitting off a small piece of an app into its 
 
 The exporting pattern we want to use is:
 
-const Component () => {
+const Component = () => {
 
 }
 
