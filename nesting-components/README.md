@@ -6,21 +6,50 @@ When thinking about where to  split up pieces of a front-end application into se
 
 Navbars are a perfect use case for our first modularized component: re-usable, not generally impacting the rest of the site, and perfect to give to a member of the team to work on in isolation. The other developers know a navbar will be at the top of the application, but otherwise, they don't have to worry much about how the navbar will interact with their part of the application. So, let's send a navbar into its own file.
 
-First, let's start with a reasonable home page and paste the following into our App.jsx file:
+In this lesson, we'll build the landing page for Hyperbo.ly, a super-hot tech start-up making unbelievable progress in every field you can name: AI, VR, Crypto, NFTs...if it's confusing and exciting, it's Hyperbo.ly! First, let's start with a reasonable home page and paste the following into our App.jsx file:
 
 ```jsx
-// TODO ADD THE STARTER CODE
+const App = () => {
+    return  <>
+            <nav id="top-navbar">
+                <ul>
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <li>
+                        <a href="/about-us">About Us</a>
+                    </li>
+                    <li>
+                        <a href="/money-pit">Investment Opportunities</a>
+                    </li>
+                        <li>
+                        <a href="/the-fine-print">Legal Disclosures</a>
+                    </li>
+                </ul>
+            </nav>
+            <main>
+                <h1>Welcome to Hyperbo.ly</h1>
+                <h3>The future is firmly in front of us!</h3>
+                <p>If you can't explain it to a fifth-grader, then our product does it.</p>
+            </main>
+            </>
+}
+
 ```
 
 Additionally, let's delete the contents of `index.css` and add some sensible styling relevant to our navbar:
 
 ```css
-/* TODO ADD THE STARTER CODE */
+#top-navbar ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+}
 ```
 
 You should see the following in your browser when you run the app:
 
-TODO: ADD SCREENSHOT OF STARTER CODE
+![Starter Code Screenshot](./assets/starter-code-screenshot.png)
 
 ## Splitting the Navbar
 
@@ -45,7 +74,24 @@ Okay, a function that returns nothing. Pretty lame. Fortunately, what we want to
 
 ```jsx
 const Navbar = () => {
-    return //TODO: ADD STARTER CODE
+    return (
+        <nav id="top-navbar">
+            <ul>
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="/about-us">About Us</a>
+                </li>
+                <li>
+                    <a href="/money-pit">Investment Opportunities</a>
+                </li>
+                    <li>
+                    <a href="/the-fine-print">Legal Disclosures</a>
+                </li>
+            </ul>
+        </nav>
+    )
 }
 ```
 
@@ -72,7 +118,11 @@ Right above the `<h1>` where the nav element used to be, we can now add the comp
 ```jsx
 const App = () => {
     <Navbar/>
-    <h1> //TODO: ADD STARTER CODE
+    <main>
+        <h1>Welcome to Hyperbo.ly</h1>
+        <h3>The future is firmly in front of us!</h3>
+        <p>If you can't explain it to a fifth-grader, then our product does it.</p>
+    </main>
 }
 ```
 
