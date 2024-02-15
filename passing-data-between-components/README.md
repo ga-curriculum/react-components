@@ -45,17 +45,17 @@ In `App.jsx`:
 const extremelyImpressiveFounders = [
     {
         name: "Elizabeth Holmes",
-        occupation: "CEO",
+        title: "CEO",
         credential: "MBA from SuperLegit U"
     },
     {
         name: "Sam Bankman-Fried",
-        occupation: "CFO",
+        title: "CFO",
         credential: "CPA from TotallyReal State"
     },
     {
         name: "Matt Damon",
-        occupation: "CMO",
+        title: "CMO",
         credential: "Was in that Movie You Saw"
     },
 ];
