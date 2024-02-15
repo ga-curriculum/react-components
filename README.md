@@ -2,7 +2,7 @@
 
 ## About
 
-tktk Write a short but descriptive summary of the content in this module.
+In this lesson, students will refactor React applications to use multiple components. They will learn the most common patterns when passing props to a child component, and understand the design decisions motivating the use of modular, re-usable components in React.
 
 ## Prerequisites
 
@@ -16,9 +16,8 @@ tktk Write a short but descriptive summary of the content in this module.
 | ------ | ------ |
 | [Setup](./setup/README.md) | Setting up the development environment |
 | [Concepts](./concepts/README.md) | Describe modularizing components |
-| [Nesting Components](./nesting-components/README.md) | Implement stateful components                    |
-| [Passing Data Between Components](./passing-data-between-components/README.md) | Use the setState handler                    |
-| [Presentational and Stateful Components](./presentational-and-stateful-components/README.md) | Use the setState handler                    |
+| [Nesting Components](./nesting-components/README.md) | Implement multiple components in multiple files                    |
+| [Passing Data Between Components](./passing-data-between-components/README.md) | Use props when mapping over React components                  |
 
 
 
