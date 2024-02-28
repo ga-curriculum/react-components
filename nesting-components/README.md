@@ -2,11 +2,15 @@
 
 **Learning objective:** By the end of this lesson, students will be able to modularize a react application across multiple components.
 
+## Modularize Components
+
+In this lesson, we'll explore modularizing components as we build the landing page for Hyperbo.ly, a super-hot tech start-up making unbelievable progress in every field you can name: AI, VR, Crypto, NFTs...if it's confusing and exciting, it's Hyperbo.ly!
+
+### Navbar Modulazation
+
 When considering where to split up pieces of a front-end application into separate components, you should think about where the lines would be drawn on a wireframe sketch of the site. You should also think about which pieces might be reusable across different pages. One particular UI piece on nearly every web page comes to mind when considering both requirements: navigation bars!
 
-Navbars are a perfect use case for our first modularized component: reusable, not generally impacting the rest of the site, and perfect for giving to a team member to work on in isolation. The other developers know a navbar will be at the top of the application. Still, otherwise, they can be reassured about how the navbar will interact with their part of the application. So, let's send a navbar into its own file.
-
-In this lesson, we'll build the landing page for Hyperbo.ly, a super-hot tech start-up making unbelievable progress in every field you can name: AI, VR, Crypto, NFTs...if it's confusing and exciting, it's Hyperbo.ly! First, let's start with a reasonable home page and paste the following into our App.jsx file:
+Navbars are a perfect use case for our first modularized component: reusable and not generally impacting the rest of the site. They usually are kept at the top of the page, and there are specific interactions we can assume a navbar would have. Let's look at some React code where we have nested a `<nav>` JSX element and some default navbar items. 
 
 ```jsx
 const App = () => {
@@ -34,7 +38,6 @@ const App = () => {
             </main>
             </>
 }
-
 ```
 
 Additionally, let's delete the contents of `index.css` and add some sensible styling relevant to our navbar:
@@ -51,17 +54,17 @@ You should see the following in your browser when you run the app:
 
 ![Starter Code Screenshot](./assets/starter-code-screenshot.png)
 
-## Splitting the Navbar
+### Splitting the Navbar
 
 The code we want to split off is bundled up nicely inside the single `<nav>` element. This makes modularizing it into a separate component a quick operation.
 
-Let's create a new `Navbar.jsx` file for this component. It should be created at the root level of the project as a sibling to `App.jsx`
+Create a new `Navbar.jsx` file for this component. It should be created at the root level of the project as a sibling to `App.jsx`
 
 ```bash
 touch Navbar.jsx
 ```
 
-We'll create a React component inside this file and export it from `Navbar.jsx` to import it into `App.jsx` and any other future components that want the main navbar at the top. It may seem odd to capitalize the names of these files since they're written in camelCase-loving JavaScript. Still, the React convention is to capitalize our components' file names and function names, so we do that here.
+We'll create a React component inside this file and export it from `Navbar.jsx` to import it into `App.jsx` and any other future components that want the main navbar at the top. It may seem odd to capitalize the names of these files since they're written in camelCase-loving JavaScript. Still, the React convention is to capitalize our components' file and function names, so we do that here.
 
 Remember, React components are nothing but functions that return HTML, so let's start with a function:
 
@@ -103,9 +106,9 @@ Add the following to the bottom of our `Navbar.jsx` file:
 export default Navbar;
 ```
 
-## Importing the Navbar into the App
+### Importing the Navbar into the App
 
-Now that the Navbar lives independently, we're ready to bring it back into the application and import it into the `App.jsx` file. We can add the following statement to the top of our `App.jsx` file:
+Now that the Navbar lives independently, we can bring it back into the application and import it into the `App.jsx` file. We can add the following statement to the top of our `App.jsx` file:
 
 ```jsx
 import Navbar from './Navbar.jsx'
@@ -126,11 +129,11 @@ const App = () => {
 }
 ```
 
-Check back in the browser, and you should see the site restored to its original look, only now with 100% more components working together to make it happen. Go team!
+Check back in the browser, and you should see the site restored to its original look, only now with 100% more components working together to make it happen. Go team! tktk tado emoji
 
 ## Component-Specific CSS. Kind of.
 
-While you'll learn more sophisticated methods of creating component-specific CSS styles later in your react journey, we should create a separate .css file for each component for now. After all, components should be treated as their own separate project, including the styling necessary to complete them. So, they should get their own .css file. 
+While you'll learn more sophisticated methods of creating component-specific CSS styles later in your react journey, we should create a separate .css file for each component. After all, components should be treated as a separate project, including the styling necessary to complete them. So, they should get their own .css file. 
 
 Move the navbar's CSS code from App.css into a new file called `Navbar.css`, created as a sibling file to `Navbar.jsx` at the root level.
 

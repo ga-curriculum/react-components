@@ -2,9 +2,13 @@
 
 **Learning objective:** By the end of this lesson, students will be able to use props in React to pass data between different components.
 
-So far, our Navbar component takes advantage of the **modularization** of React components. The other significant impact of React components is their **reusability**, so let's take a look at re-using a single component to represent all the items in a list.
+## Reusability in React
+
+So far, our Navbar component takes advantage of the **modularization** of React components. The other significant impact of React components is their **reusability**, so let's look at reusing a single component to represent all the items in a list.
 
 Think about the standard dashboard page, an indexed list of things on most web applications. Each item in the list could be its own React component, but that should mean something other than creating a new, unique file for everything in the list. This wouldn't even be possible if the list was dynamically created based on user data!
+
+tktk Hunter - Can you make an image showing off the above. Just like a wireframe of maybe store items or something like that. Something that we would have to map over to display showing off that react is good for reusing on items that just need a template and some data to display. Let me know (Beth) if this is vague lol
 
 So, we'd like a single reusable React component that displays one item in the list. Given an array of objects we want to display, we need some way of passing a single object to each instance of the reusable list item component.
 
@@ -13,6 +17,8 @@ Enter `props`.
 Every React component is just a JavaScript function that returns HTML. However, when we write JS functions, we almost always have some kind of parameter passed into the function. So far, our React components have yet to be designed to accept any input. The parentheses in our arrow functions have always been empty. Until now!
 
 React components can pass data down to child components using the `props` keyword. One of React's core features is how data only flows downwards from a parent to a child component. This design pattern is technically referred to as **unidirectional data flow**. In React, the child component cannot define or change the props of its parent, and the child is not even allowed to change the props it is given by its parent. In other words, `props` are **immutable**. They only go one way; once they've been passed down, the children are left to deal with them how they are.
+
+tktk Hunter - also can we do an image here as well. Something to show off the unidirectional flow from parent to child.
 
 There are two pieces of the puzzle to cover: setting up a component to accept props from its parent and setting up the parent to send props down to its children.
 
@@ -61,19 +67,10 @@ const extremelyImpressiveFounders = [
 ];
 ```
 
-## You Do: Map Over the Founders, Without Props
+### tktk hat emoji You Do: Map Over the Founders, Without Props
 
-Given this array in `App.jsx`, write a .map statement inside a `<ul>` that loops over each one and adds the `<FounderListeItem>` to the list.
+Using the `extremelyImpressiveFounders` array in `App.jsx`, write a `.map` statement inside a `<ul>` that loops over each one and adds the `<FounderListeItem>` to the list.
 
-## Solution
-```jsx
-        <ul>
-            { extremelyImpressiveFounders.map((founder)=> (
-            <FounderListItem></FounderListItem>
-            ))
-            }
-        </ul>
-```
 
 ## Sending Data to the Child
 
@@ -83,7 +80,7 @@ We can add `props` using the same syntax as HTML attributes to send data from th
 <FounderListItem founder={founder}/>
 ```
 
-Note the brackets around the right-hand value side of the attribute. This ensures the value of the JS variable `founder`, which comes from the callback function in the `map` statement, will be assigned to a property named `founder` in the child.
+Note the brackets around the right-hand value side of the attribute. This ensures the value of the JS variable `founder`, which comes from the callback function in the `.map` statement, will be assigned to a property named `founder` in the child.
 
 ## Using Props in the Child
 
@@ -95,7 +92,7 @@ const FounderListItem = (props) => {
 }
 ```
 
-Now, whenever we want to access a property passed down from the parent, we can use the `props` object. In our app, `props` will have a `founder` property, since that's what we named the attribute inside of `App.jsx`. We can update our `FounderListItem` component to display the data given to it:
+Whenever we want to access a property passed down from the parent, we can use the `props` object. In our app, `props` will have a `founder` property, since that's what we named the attribute inside of `App.jsx`. We can update our `FounderListItem` component to display the data given to it:
 
 ```jsx
 const FounderListItem = (props) => {
@@ -121,7 +118,7 @@ const FounderListItem = ({founder}) => {
 
 This doesn't require changing the parent component's syntax, so it's purely a matter of style in the child component.
 
-## You Do: Refactor the Navbar List
+### tktk hat emoji You Do: Refactor the Navbar List
 
 While the items in the navbar are unlikely to change and are typically okay to hard-code, let's use the opportunity to practice this pattern of refactoring lists into separate components. We aim to refactor the list of links in the Navbar to use the same mapping pattern as our list of founders.
 
@@ -146,34 +143,6 @@ const pagesInTheApp = [
         href: '/the-fine-print'
     },
 ]
-```
-
-## Solution
-
-In ```Navbar.jsx```:
-
-```jsx
-import NavbarListItem from './NavbarListItem';
-// ...
-return <nav id="top-navbar">
-    <ul>
-      {pagesInTheApp.map((pageInfo)=>(
-        <NavbarListItem pageInfo={pageInfo}/>
-      ))}
-    </ul>
-  </nav>
-```
-
-In `NavbarListItem.jsx`:
-
-```jsx
-const NavbarListItem = (props) => {
-    return <li>
-        <a href={props.pageInfo.href}>{props.pageInfo.name}</a>
-    </li>
-}
-
-export default NavbarListItem;
 ```
 
 ## When Do Components Go Too Far?
