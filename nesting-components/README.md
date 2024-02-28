@@ -153,7 +153,7 @@ Nice and tidy! Check back in the browser, and you should see the site restored t
 
 ## Component-Specific CSS. Kind of.
 
-While you'll learn more sophisticated methods of creating component-specific CSS styles later in your react journey, we should create a separate .css file for each component. After all, components should be treated as a separate project, including the styling necessary to complete them. So, they should get their own .css file. 
+While you'll learn more sophisticated methods of creating component-specific CSS styles later in your React journey, for now we should at least create a separate .css file for each component. Components are at their best when treated as modular, including the code necessary to style them. So, it follows that they should use their own .css files. 
 
 Move the navbar's CSS code from App.css into a new file called `Navbar.css`, created as a sibling file to `Navbar.jsx` at the root level.
 
@@ -165,4 +165,4 @@ Now, add an import statement to the top of your `Navbar.jsx` file that imports t
 import './Navbar.css'
 ```
 
-You might think this means the style will only be applied within the Navbar component. While that would be amazing (and there are tools to create actual, component-specific CSS), sadly, the styles will be applied globally to any page the Navbar component shows up on. So, you should still write your rules specific to the scope of the component, such as using an id, as in our example Navbar component's style.
+You might think this means the style will only be applied within the Navbar component. While that would be amazing (and there are tools to create actual, component-specific CSS), sadly the styles will be applied globally to any page the Navbar component shows up on. So, you should still write your rules specific to the scope of the component, such as using an id, as in our example Navbar component's style.
