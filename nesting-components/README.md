@@ -129,7 +129,7 @@ const App = () => {
 }
 ```
 
-Check back in the browser, and you should see the site restored to its original look, only now with 100% more components working together to make it happen. Go team! tktk tado emoji
+Check back in the browser, and you should see the site restored to its original look, only now with 100% more components working together to make it happen. Go team! 🎉
 
 ## Component-Specific CSS. Kind of.
 

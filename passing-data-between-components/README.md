@@ -67,7 +67,7 @@ const extremelyImpressiveFounders = [
 ];
 ```
 
-### tktk hat emoji You Do: Map Over the Founders, Without Props
+### 🎓 You Do: Map Over the Founders, Without Props
 
 Using the `extremelyImpressiveFounders` array in `App.jsx`, write a `.map` statement inside a `<ul>` that loops over each one and adds the `<FounderListeItem>` to the list.
 
@@ -118,7 +118,7 @@ const FounderListItem = ({founder}) => {
 
 This doesn't require changing the parent component's syntax, so it's purely a matter of style in the child component.
 
-### tktk hat emoji You Do: Refactor the Navbar List
+### 🎓 You Do: Refactor the Navbar List
 
 While the items in the navbar are unlikely to change and are typically okay to hard-code, let's use the opportunity to practice this pattern of refactoring lists into separate components. We aim to refactor the list of links in the Navbar to use the same mapping pattern as our list of founders.
 

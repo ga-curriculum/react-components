@@ -29,7 +29,7 @@ In a React application, we take a different approach:
 - **Component Reusability** - Components can be made to be reusable. You can easily import components when needed, reducing code duplication.
 - **State and Props** - React components can have internal data called state and be passed data from their parent if nested called props. State and props allow the component to contain their own logic.
 
-> tktk brian emoji State and props will not be the focus of this module, but it is essential to know that they are there and are part of a React application.
+> 🧠 State and props will not be the focus of this module, but it is essential to know that they are there and are part of a React application.
 
 In React, we think of **components** as we build. Each component is responsible for its own structure, style, and behavior.
 
