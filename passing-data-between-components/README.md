@@ -96,6 +96,7 @@ Now that data is being sent into the `FounderListItem` component, we can refacto
 
 ```jsx
 // src/FounderListItem.jsx
+
 const FounderListItem = (props) => {
     // Component content remains unchanged
 }

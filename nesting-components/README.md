@@ -74,6 +74,7 @@ Remember, React components are nothing but functions that return HTML, so let's 
 
 ```jsx
 // src/Navbar.jsx
+
 const Navbar = () => {
 }
 ```
@@ -82,6 +83,7 @@ Okay, a function that returns nothing. Pretty lame. Fortunately, what we want to
 
 ```jsx
 // src/Navbar.jsx
+
 const Navbar = () => {
     return (
         <nav id="top-navbar">
@@ -120,6 +122,7 @@ Now that the Navbar lives independently, we can bring it back into the applicati
 
 ```jsx
 // src/App.jsx
+
 import Navbar from './Navbar.jsx'
 ```
 
@@ -129,6 +132,7 @@ Right above the `<h1>` where the nav element used to be, we can now add the comp
 
 ```jsx
 // src/App.jsx
+
 const App = () => {
   return (
     <>
@@ -155,6 +159,7 @@ Now, add an import statement to the top of your `Navbar.jsx` file that imports t
 
 ```jsx
 // src/Navbar.jsx
+
 import './Navbar.css'
 ```
 
