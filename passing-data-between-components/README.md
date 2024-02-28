@@ -29,16 +29,22 @@ To convince investors to fund our incredible, mind-blowing AI crypto VR/AR start
 First, set up our child component by creating a file named `FounderListItem.jsx` and setting it up with the smallest, testable filler code. No need to worry about props yet. Let's just get the multiple components flowing and go from there.
 
 ```jsx
+// src/FounderListItem.jsx
+
 const FounderListItem = () => {
-    return <li> 
-    <h3>Hello, I'm a super impressive Founder too!</h3>
-    </li>
+    return (
+        <li> 
+            <h3>Hello, I'm a super impressive Founder too!</h3>
+        </li>
+    )
 }
 ```
 
 Delightful. Remember to export it!
 
 ```jsx
+// src/FounderListItem.jsx
+
 export default FounderListItem
 ```
 
@@ -47,6 +53,7 @@ Perfection. Now that we have the child component stubbed out let's add an array 
 In `App.jsx`:
 
 ```jsx
+// src/App.jsx
 
 const extremelyImpressiveFounders = [
     {
@@ -71,12 +78,13 @@ const extremelyImpressiveFounders = [
 
 Using the `extremelyImpressiveFounders` array in `App.jsx`, write a `.map` statement inside a `<ul>` that loops over each one and adds the `<FounderListeItem>` to the list.
 
-
 ## Sending Data to the Child
 
 We can add `props` using the same syntax as HTML attributes to send data from the parent component to the child. Simply define your key-value pairs in the element like so:
 
 ```jsx
+// src/App.jsx
+
 <FounderListItem founder={founder}/>
 ```
 
@@ -87,6 +95,7 @@ Note the brackets around the right-hand value side of the attribute. This ensure
 Now that data is being sent into the `FounderListItem` component, we can refactor that function to accept a new parameter named `props`:
 
 ```jsx
+// src/FounderListItem.jsx
 const FounderListItem = (props) => {
     // Component content remains unchanged
 }
@@ -95,11 +104,15 @@ const FounderListItem = (props) => {
 Whenever we want to access a property passed down from the parent, we can use the `props` object. In our app, `props` will have a `founder` property, since that's what we named the attribute inside of `App.jsx`. We can update our `FounderListItem` component to display the data given to it:
 
 ```jsx
+// src/FounderListItem.jsx
+
 const FounderListItem = (props) => {
-    return <li>
-        <h3>{props.founder.name}: {props.founder.title}</h3>
-        <p>{props.founder.credential}</p>
-    </li>
+    return (
+        <li>
+            <h3>{props.founder.name}: {props.founder.title}</h3>
+            <p>{props.founder.credential}</p>
+        </li>
+    )
 }
 ```
 
@@ -108,11 +121,15 @@ const FounderListItem = (props) => {
 A typical pattern you'll encounter is React developers **destructuring** the props object in their components. Depending on how nested the data gets, it can get tedious to keep typing and reading the word `props` in front of everything, such as `props.founder.name` and `props.founder.credential`. Instead, the component can use object destructuring syntax when defining its parameters, like so:
 
 ```jsx
-const FounderListItem = ({founder}) => {
-    return <li>
-        <h3>{founder.name}: {founder.title}</h3>
-        <p>{founder.credential}</p>
-    </li>
+// src/FounderListItem.jsx
+
+const FounderListItem = ({ founder }) => {
+    return (
+        <li>
+            <h3>{founder.name}: {founder.title}</h3>
+            <p>{founder.credential}</p>
+        </li>
+    )
 }
 ```
 
@@ -125,6 +142,8 @@ While the items in the navbar are unlikely to change and are typically okay to h
 Add the following array to `Navbar.jsx` and use it to map over a second child component for each item in the list. This will involve creating a new `NavbarListItem.jsx` component to accept and display props from the `Navbar.jsx` parent component.
 
 ```js
+// src/Navbar.jsx
+
 const pagesInTheApp = [
     {
         name: 'Home',
