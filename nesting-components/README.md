@@ -6,17 +6,18 @@
 
 In this lesson, we'll explore modularizing components as we build the landing page for Hyperbo.ly, a super-hot tech start-up making unbelievable progress in every field you can name: AI, VR, Crypto, NFTs...if it's confusing and exciting, it's Hyperbo.ly!
 
-### Navbar Modulazation
+### Navbar Modularization
 
-When considering where to split up pieces of a front-end application into separate components, you should think about where the lines would be drawn on a wireframe sketch of the site. You should also think about which pieces might be reusable across different pages. One particular UI piece on nearly every web page comes to mind when considering both requirements: navigation bars!
+When considering where to split up pieces of a front-end application into separate components, you should think about where the lines would be drawn on a wireframe sketch of the site. It's also helpful to think about which pieces might be reusable across different pages. One particular UI piece that is on nearly every web page comes to mind when considering both requirements: navigation bars!
 
-Navbars are a perfect use case for our first modularized component: reusable and not generally impacting the rest of the site. They usually are kept at the top of the page, and there are specific interactions we can assume a navbar would have. Let's look at some React code where we have nested a `<nav>` JSX element and some default navbar items. 
+Navbars are a perfect use case for our first modularized component: reusable and generally isolated from the rest of the site. They usually are kept at the top of the page, and there are specific interactions we can assume a navbar would have. Let's look at some React code where we have nested a `<nav>` JSX element and some default navbar items. 
 
 ```jsx
 // scr/App.jsx
 
 const App = () => {
-    return  <>
+    return (
+        <>
             <nav id="top-navbar">
                 <ul>
                     <li>
@@ -28,7 +29,7 @@ const App = () => {
                     <li>
                         <a href="/money-pit">Investment Opportunities</a>
                     </li>
-                        <li>
+                    <li>
                         <a href="/the-fine-print">Legal Disclosures</a>
                     </li>
                 </ul>
@@ -38,11 +39,12 @@ const App = () => {
                 <h3>The future is firmly in front of us!</h3>
                 <p>If you can't explain it to a fifth-grader, then our product does it.</p>
             </main>
-            </>
+        </>
+    )
 }
 ```
 
-Additionally, let's delete the contents of `index.css` and add some sensible styling relevant to our navbar:
+Additionally, let's delete the contents of `index.css` and add some styling to our navbar:
 
 ```css
 /* src/index.css */
@@ -68,9 +70,9 @@ Create a new `Navbar.jsx` file for this component. It should be created in the `
 touch src/Navbar.jsx
 ```
 
-We'll create a React component inside this file and export it from `Navbar.jsx` to import it into `App.jsx` and any other future components that want the main navbar at the top. It may seem odd to capitalize the names of these files since they're written in camelCase-loving JavaScript. Still, the React convention is to capitalize our components' file and function names, so we do that here.
+We'll create a React component inside this file and export it from `Navbar.jsx`. Once this is done we can import it into `App.jsx`, as well as any other future components that require a navbar at the top. It may seem odd to capitalize the names of these files since they're written in camelCase-loving JavaScript, but the React convention is to capitalize our components' file and function names. 
 
-Remember, React components are nothing but functions that return HTML, so let's start with a function:
+Remember, React components are essentially just functions that return HTML, so let's start with a function:
 
 ```jsx
 // src/Navbar.jsx
@@ -79,7 +81,7 @@ const Navbar = () => {
 }
 ```
 
-Okay, a function that returns nothing. Pretty lame. Fortunately, what we want to return is that big `<nav>` element from the `App.jsx` file, so we can perform a significant cut-and-paste operation and paste the entirety of the `<nav>` element as the return value for `Navbar`:
+So far, a function that returns nothing. Fortunately, what we want to return is the big `<nav>` element from the `App.jsx` file, so we can cut-and-paste the entirety of the `<nav>` element as the return value for `Navbar`:
 
 ```jsx
 // src/Navbar.jsx
@@ -97,7 +99,7 @@ const Navbar = () => {
                 <li>
                     <a href="/money-pit">Investment Opportunities</a>
                 </li>
-                    <li>
+                <li>
                     <a href="/the-fine-print">Legal Disclosures</a>
                 </li>
             </ul>
@@ -106,7 +108,7 @@ const Navbar = () => {
 }
 ```
 
-The last piece of the puzzle for modularizing components is the critical `export` statement, which allows it to be pulled into other components that require it with an `import` statement.
+The last piece of the puzzle for modularizing components is the critical `export` statement, which allows components to be pulled into other components with an `import` statement.
 
 Add the following to the bottom of our `Navbar.jsx` file:
 
@@ -118,7 +120,7 @@ export default Navbar;
 
 ### Importing the Navbar into the App
 
-Now that the Navbar lives independently, we can bring it back into the application and import it into the `App.jsx` file. We can add the following statement to the top of our `App.jsx` file:
+Now that we've created a Navbar component, let's import it into our `App.jsx` file. Add the following statement to the top of our `App.jsx` file:
 
 ```jsx
 // src/App.jsx
@@ -126,7 +128,7 @@ Now that the Navbar lives independently, we can bring it back into the applicati
 import Navbar from './Navbar.jsx'
 ```
 
-To actually use the Navbar component in our rendered App component, we can add it using the same HTML syntax as any other element, only using the proper name we gave the component: in this case, `<Navbar></Navbar>`. Components typically don't need or want any content between the opening and closing tags, so React components typically use the self-closing tag shortcut: `<Navbar/>`
+To include the `Navbar` component in `App.jsx` we use the same HTML syntax as with any other element - in this case, `<Navbar></Navbar>`. React components rarely need any content between their opening and closing tags, so they will typically use the self-closing tag shortcut: `<Navbar/>`
 
 Right above the `<h1>` where the nav element used to be, we can now add the component back in:
 
@@ -147,7 +149,7 @@ const App = () => {
 }
 ```
 
-Check back in the browser, and you should see the site restored to its original look, only now with 100% more components working together to make it happen. Go team! 🎉
+Nice and tidy! Check back in the browser, and you should see the site restored to its original look, only now with 100% more components working together to make it happen. 
 
 ## Component-Specific CSS. Kind of.
 
