@@ -20,7 +20,6 @@ In this lesson, students will refactor React applications to use multiple compon
 | [Passing Data Between Components](./passing-data-between-components/README.md) | Use props when mapping over React components                  |
 
 
-
 ## References
 
 📖 [Reference Materials](./references/README.md)
