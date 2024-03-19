@@ -8,9 +8,9 @@ So far, our Navbar component takes advantage of the **modularization** of React 
 
 Think about the standard dashboard page, which is an indexed list of things on most web applications. Each item in the list _could_ be its own React component, but that would mean creating a new, unique file for every element in the list. This wouldn't even be possible if the list was dynamically created based on user data!
 
-[tktk Hunter - Can you make an image showing off the above. Just like a wireframe of maybe store items or something like that. Something that we would have to map over to display showing off that react is good for reusing on items that just need a template and some data to display. Let me know (Beth) if this is vague lol]
-
 Instead, we want to create a single reusable React component that is built to display one item in a list. Given an array of objects we want to display, we need some way of passing a single object to each instance of the reusable list item component.
+
+![Reusability](./assets/reusability.png)
 
 Enter `props`.
 
@@ -18,7 +18,7 @@ We mentioned earlier that every React component is essentially a JavaScript func
 
 React components can pass data down to child components as `props`. One of React's core features is how data only flows downwards from a parent to a child component. This design pattern is technically referred to as **unidirectional data flow**. In React, the child component cannot define or change the props of its parent, and the child is not even allowed to change the props it is given by its parent. In other words, `props` are **immutable**. 
 
-[tktk Hunter - also can we do an image here as well. Something to show off the unidirectional flow from parent to child.]
+![Props](./assets/props-a.png)
 
 There are two pieces of the puzzle to cover: setting up a component to accept props from its parent, and setting up the parent to send props down to its children.
 
@@ -76,9 +76,11 @@ const extremelyImpressiveFounders = [
 
 ### 🎓 You Do: Map Over the Founders, Without Props
 
-In the return statement of `App.jsx`, inside a `<ul>`, use a `.map` statement to loop over the `extremelyImpressiveFounders` array and return a `<FounderListItem>` for each founder object.
+In the return statement of `App.jsx`, inside a `<ul>`, use a `.map()` statement to loop over the `extremelyImpressiveFounders` array and return a `<FounderListItem>` for each founder object.
 
 ## Sending Data to the Child
+
+![Props](./assets/props-b.png)
 
 To pass `props` to a child component, we use the same syntax as HTML attributes. We define key-value pairs in the element like so:
 

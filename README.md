@@ -1,4 +1,4 @@
-# ![React Components](./assets/tktk-hero.png)
+# ![React Components](./assets/hero.png)
 
 ## About
 
@@ -16,9 +16,8 @@ In this lesson, students will refactor React applications to use multiple compon
 | ------ | ------ |
 | [Setup](./setup/README.md) | Setting up the development environment |
 | [Concepts](./concepts/README.md) | Describe modularizing components |
-| [Nesting Components](./nesting-components/README.md) | Implement multiple components in multiple files                    |
-| [Passing Data Between Components](./passing-data-between-components/README.md) | Use props when mapping over React components                  |
-
+| [Nesting Components](./nesting-components/README.md) | Implement multiple components in multiple files |
+| [Passing Data Between Components](./passing-data-between-components/README.md) | Use props when mapping over React components |
 
 ## References
 

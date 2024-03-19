@@ -1,4 +1,4 @@
-# ![React Project Setup](./assets/hero.png)
+# ![React Components - Setup](./assets/hero.png)
 
 ## Setup
 
