@@ -14,7 +14,7 @@ Create a new Vite project for your React app:
 npm create vite@latest
 ```
 
-You'll be prompted to choose a project name. Let's name it `react-with-multiple-components`. 
+You'll be prompted to choose a project name. Let's name it `react-components`. 
 
 - Select a framework. Use the arrow keys to choose the `React` option and hit `Enter`.
 
@@ -23,7 +23,7 @@ You'll be prompted to choose a project name. Let's name it `react-with-multiple-
 Navigate to your new project directory and install the necessary dependencies:
 
 ```bash
-cd react-with-multiple-components
+cd react-components
 npm i
 ```
 
@@ -75,12 +75,12 @@ To add this project to GitHub, initialize a Git repository:
 git init
 ```
 
-Make a new repository on [GitHub](https://github.com/) named react-with-multiple-components. 
+Make a new repository on [GitHub](https://github.com/) named react-components. 
 
 Link your local project to your remote GitHub repo:
 
 ```bash
-git remote add origin https://github.com/<github-username>/react-with-multiple-components.git
+git remote add origin https://github.com/<github-username>/react-components.git
 git push origin main
 ```
 

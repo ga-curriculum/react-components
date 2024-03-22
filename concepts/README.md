@@ -1,10 +1,10 @@
 # ![React Components - Concepts](./assets/hero.png)
 
-**Learning objective:** By the end of this lesson, students will be able to articulate the value of modularizing components in React.
+**Learning objective:** By the end of this lesson, students will be able to explain the value of modularizing components in React.
 
 ## Modularization in React
 
-Ask any React developer what the main idea of React is, and there's a decent chance they'll answer "components."
+Ask any React developer what the primary feature of React is, and there's a decent chance they'll answer "components."
 
 Splitting up front-end code into separate, smaller pieces may not seem revolutionary at first. Still, the practices and design principles that follow from using React components can change how you look at building and maintaining front-end applications.
 
