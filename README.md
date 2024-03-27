@@ -12,12 +12,19 @@ In this lesson, students will refactor React applications to use multiple compon
 
 ## Content
 
-| Lesson | Skills |
-| ------ | ------ |
-| [Setup](./setup/README.md) | Setting up the development environment |
-| [Concepts](./concepts/README.md) | Describe modularizing components |
-| [Nesting Components](./nesting-components/README.md) | Implement multiple components in multiple files |
-| [Passing Data Between Components](./passing-data-between-components/README.md) | Use props when mapping over React components |
+| Lesson                                                   | Video Time | Video | Skills              |
+| -------------------------------------------------------- | :--------: | :---: | ------------------- |
+| [Setup](./setup/README.md)                                                     | -- | -- | Setting up the development environment          |
+| [Concepts](./concepts/README.md)                                               | -- | -- | Describe modularizing components                |
+| [Component Based Structure](./component-based-structure/README.md)             | -- | -- | Identifying component structure in a web page   |
+| [Nesting Components](./nesting-components/README.md)                           | -- | -- | Implement multiple components in multiple files |
+| [Passing Data Between Components](./passing-data-between-components/README.md) | -- | -- | Use props when mapping over React components    |
+
+## Level Up content
+
+| Lesson                                                   | Video Time | Video | Skills              |
+| -------------------------------------------------------- | :--------: | :---: | ------------------- |
+| [Everything is a Component](./everything-is-a-component/README.md)                  |     --     |  --   | creating more granular components and passing props from parents to grandchildren  |
 
 ## References
 

@@ -1,43 +1,91 @@
 # ![React Components - Passing Data Between Components](./assets/hero.png)
 
-**Learning objective:** By the end of this lesson, students will be able to use props in React to pass data between different components.
+**Learning objective:** By the end of this lesson, learners will be able to understand and implement the concept of passing data between components in React using `props`.
 
 ## Reusability in React
 
-So far, our Navbar component takes advantage of the **modularization** of React components. The other significant impact of React components is their **reusability**, so let's look at reusing a single component to represent all the items in a list.
+Our `Navbar` component has already showcased the **modularity** of React components. But there’s another impressive feature in React’s toolkit: **reusability**. Let’s explore how we can reuse a single component for multiple items in a list.
 
-Think about the standard dashboard page, which is an indexed list of things on most web applications. Each item in the list _could_ be its own React component, but that would mean creating a new, unique file for every element in the list. This wouldn't even be possible if the list was dynamically created based on user data!
+First, we need to add the rest of our sample markup to our `App` component:
 
-Instead, we want to create a single reusable React component that is built to display one item in a list. Given an array of objects we want to display, we need some way of passing a single object to each instance of the reusable list item component.
+```jsx
+// scr/App.jsx
+
+const App = () => {
+  return (
+    <>
+      <Navbar />
+      <main>
+        <h1>Welcome to Hyperbo.ly</h1>
+        <h2>The future is firmly in front of us!</h2>
+        <p>
+          If you can't explain it to a fifth-grader, then our product does it.
+        </p>
+      </main>
+      <h2>Our Founders</h2>
+      <ul>
+        <li>
+          <h3>Elizabeth Holmes: CEO</h3>
+          <p>MBA from SuperLegit University</p>
+        </li>
+        <li>
+          <h3>Sam Bankman-Fried: CFO</h3>
+          <p>CPA from TotallyReal State</p>
+        </li>
+        <li>
+          <h3>Matt Damon: CMO</h3>
+          <p>Was in that Movie You saw</p>
+        </li>
+      </ul>
+    </>
+  );
+};
+```
+
+### Remember the `<ul>` of founders?
+
+It presents a series of items - in this case, the founders - each with an name and description. You might consider turning each founder's details into a separate React component, but imagine the hassle of creating a distinct file for each founder, especially when the list might change or expand.
+
+A more efficient approach is to create a single, flexible React component that can represent any founder in the list. Picture it as a template that shapes itself according to the data it receives. For example, this component would take the information of each founder (like the name, title, and credential) and render it appropriately. We need a method to pass the specific details of each founder, perhaps as an object, to this versatile component, allowing it to dynamically render the founder's information.
 
 ![Reusability](./assets/reusability.png)
 
-Enter `props`.
+## Enter `props`
 
-We mentioned earlier that every React component is essentially a JavaScript function that returns HTML. When we write JS functions, we often have some kind of argument passed into the function. So far, our React components have not been designed to accept any input - until now!
+We mentioned earlier that every React component is essentially a JavaScript function that returns HTML. When writing JS functions, its common to pass in data as an argument. So far, our React components have not been written to accept any input - until now!
 
-React components can pass data down to child components as `props`. One of React's core features is how data only flows downwards from a parent to a child component. This design pattern is technically referred to as **unidirectional data flow**. In React, the child component cannot define or change the props of its parent, and the child is not even allowed to change the props it is given by its parent. In other words, `props` are **immutable**. 
+React's architecture allows data to flow from parent components to child components using **`props`**.
 
-![Props](./assets/props-a.png)
+- This is key for passing data around in your application, reinforcing React's tree-like structure. Think of it as a one-way street where data travels downwards from a parent to a child component, a concept central to React known as **_unidirectional data flow_**.
 
-There are two pieces of the puzzle to cover: setting up a component to accept props from its parent, and setting up the parent to send props down to its children.
+Another important feature is that `props` are **_immutable_**.
 
-## Creating the Child Component
+- This means that a child component cannot change the props it receives from its parent, nor can it alter the props of its parent or sibling components. `Props` are like read-only instructions sent down from parent to child, ensuring a stable and predictable flow of data.
 
-To convince investors to fund our incredible, mind-blowing AI crypto VR/AR startup, let's have the home page display a list of the fantastic founding team putting this thing together. The App.jsx component will loop over an array of objects to generate this list, with each object being passed down as props to a child component.
+To see this in action, consider our web page example. Imagine if we want to pass information about each founder from our main `App` component to a `FounderListItem` component. We would use `props` to send each founder's details down the component tree.
 
-First, let's set up our child component by creating a file named `FounderListItem.jsx` with (for now) some small, testable filler code. No need to worry about props yet. Let's just get the multiple components flowing and go from there.
+So, in our case, each `FounderListItem` would receive its own set of props (like name, title, and credential) from the `App` component but couldn't modify this data. It can only use the props to render the founder's details as specified.
+
+
+
+To create this structure in our existing application, there are two pieces of the puzzle to solve: setting up a component to accept props from its parent, and setting up the parent to send props down to its children.
+
+## Creating the child component
+
+To convince investors to fund our incredible, mind-blowing AI crypto VR/AR startup, let's have the home page display a list of the fantastic founding team putting this thing together.
+
+First, let's set up our child component by creating a file named `FounderListItem.jsx` with some small, testable placeholder code. No need to worry about `props` yet. Let's just get our components rendered to the page.
 
 ```jsx
 // src/FounderListItem.jsx
 
 const FounderListItem = () => {
-    return (
-        <li> 
-            <h3>Hello, I'm a super impressive Founder too!</h3>
-        </li>
-    )
-}
+  return (
+    <li>
+      <h3>Hello, I'm a super impressive Founder!</h3>
+    </li>
+  );
+};
 ```
 
 Remember to export it!
@@ -45,130 +93,264 @@ Remember to export it!
 ```jsx
 // src/FounderListItem.jsx
 
-export default FounderListItem
+export default FounderListItem;
 ```
 
-Now that we have the child component stubbed out let's add an array of data to our App component and map through it, returning an instance of `<FounderListItem>` for each object in the array:
+### Render our components in `App.jsx`
 
-In `App.jsx`, add the following data:
+Import `FounderListItem` at the top of App.jsx and replace the list items in the JSX with the new component.
+
+```jsx
+// scr/App.jsx
+
+import FounderListItem from "./FounderListItem.jsx";
+import Navbar from "./Navbar.jsx";
+
+const App = () => {
+  return (
+    <>
+      <Navbar />
+      <main>
+        <h1>Welcome to Hyperbo.ly</h1>
+        <h2>The future is firmly in front of us!</h2>
+        <p>
+          If you can't explain it to a fifth-grader, then our product does it.
+        </p>
+      </main>
+      <h2>Our Founders</h2>
+      <ul>
+        <FounderListItem />
+        <FounderListItem />
+        <FounderListItem />
+      </ul>
+    </>
+  );
+};
+```
+
+Notice how modular our `App` component markup is starting to look!
+
+Now that we have the child components stubbed out, let's add an array of founder data to our `App` component and start passing real props to our `FounderListItem` components.
+
+ Add the following data at the top of In `App.jsx`, just below the import statements:
 
 ```jsx
 // src/App.jsx
 
 const extremelyImpressiveFounders = [
-    {
-        name: "Elizabeth Holmes",
-        title: "CEO",
-        credential: "MBA from SuperLegit U"
-    },
-    {
-        name: "Sam Bankman-Fried",
-        title: "CFO",
-        credential: "CPA from TotallyReal State"
-    },
-    {
-        name: "Matt Damon",
-        title: "CMO",
-        credential: "Was in that Movie You saw"
-    },
+  {
+    name: "Elizabeth Holmes",
+    title: "CEO",
+    credential: "MBA from SuperLegit University",
+  },
+  {
+    name: "Sam Bankman-Fried",
+    title: "CFO",
+    credential: "CPA from TotallyReal State",
+  },
+  {
+    name: "Matt Damon",
+    title: "CMO",
+    credential: "Was in that Movie You saw",
+  },
 ];
 ```
 
-### 🎓 You Do: Map Over the Founders, Without Props
+We will use this array to dynamically pass data to each of our child components soon, but first we must prepare the child components to receive `props`. 
 
-In the return statement of `App.jsx`, inside a `<ul>`, use a `.map()` statement to loop over the `extremelyImpressiveFounders` array and return a `<FounderListItem>` for each founder object.
+## Passing `props`to a child component
 
-## Sending Data to the Child
+`Props` are passed to child components by adding them as named attributes to the component elements in the JSX.
 
-![Props](./assets/props-b.png)
+```jsx
+<FounderListItem name="Elizabeth Holmes" title="CEO" credential="MBA from SuperLegit University" />
+```
 
-To pass `props` to a child component, we use the same syntax as HTML attributes. We define key-value pairs in the element like so:
+> Here we are passing three `props` as strings by the variables: `name`, `title` and `credential`.
+
+However `props` are not limited to strings, and can also take the form of objects or arrays.
+
+```jsx
+<FounderListItem founder={{name: "Elizabeth Holmes", title: "CEO", credential: "BA from SuperLegit University"}} />
+```
+
+> Here we are passing a single `prop` as an object named `founder`.
+
+## Reading `props` inside child components
+
+React components are just functions, so once a `prop` has been passed to a component in JSX, it's like passing an argument that can be used inside the component file.
+
+```jsx
+const FounderListItem = ({name, title, credential}) => {
+  return (
+    <li>
+      <h3>
+        {name}: {title}
+      </h3>
+      <p>{credential}</p>
+    </li>
+  );
+};
+```
+
+### 🎓 You Do Passing `props`
+
+Take a moment and refactor your `FounderListItem` component to receive `props`. Then practice passing some to the component via `App`.
+
+
+> Don't be confused by the curly braces `{ }` inside the function `()` parentheses above. This is not React, this is Javascript **destructuring**. React components actually only take one argument by default, an object called "props". By using destructuring syntax, we avoid the more verbose syntax of directly accessing each property of the props object in our component.
+>
+> ```jsx
+> const FounderListItem = (props) => {
+>   return (
+>     <li>
+>       <h3>
+>         {props.name}: {props.title}
+>       </h3>
+>       <p>{props.credential}</p>
+>     </li>
+>   );
+> };
+> ```
+>
+> Destructuring keeps the code in our components more readable and is the more modern syntax convention for handling `props`.
+
+<!-- ![Props](./assets/props-a.png) -->
+[tktk hunter a graphic with the connection between the component and the function]()
+
+## Dynamically rendering components with props
+
+We have three founders to list on our site, so passing individual `props` values does not allow us to programmatically render the data from our `extremelyImpressiveFounders` array. For this, we'll need to create a loop in our JSX to dynamically render data from our list.
+
+Let's refactor `App.jsx` to include a mapped list of `FounderListItem` components:
 
 ```jsx
 // src/App.jsx
 
-<FounderListItem founder={founder} />
+const App = () => {
+  return (
+    <>
+      <Navbar />
+      <main>
+        <h1>Welcome to Hyperbo.ly</h1>
+        <h2>The future is firmly in front of us!</h2>
+        <p>
+          If you can't explain it to a fifth-grader, then our product does it.
+        </p>
+      </main>
+      <h2>Our Founders</h2>
+      <ul>
+        {extremelyImpressiveFounders.map((founder, index) => (
+          <FounderListItem
+            key={index}
+            name={founder.name}
+            title={founder.title}
+            credential={founder.credential}
+          />
+        ))}
+      </ul>
+    </>
+  );
+};
 ```
 
-Within the resulting `props` object, the lefthand `founder` will be the key, while the value passed into the curly braces will be the value.
+> Reminder: When we use the `.map()` method in React to create a list of components, like our `FounderListItem` components, it's essential to give each one a unique `key` prop. This `key` helps React keep track of each item in the list. Specifically, it's used for identifying which items have changed, been added, or been removed. This is crucial for performance, especially when dealing with dynamic lists that might get updated or reordered.
 
-## Using Props in the Child
+We should now see our founders rendered to the page dynamically from our array. Great work! 
 
-Now that data is being passed down to the `FounderListItem` component, we can refactor that function to accept a new parameter named `props`:
+## Consolidating our `props`
+
+Currently, there are only three properties listed for each object of the `extremelyImpressiveFounders` array- `name`, `title` and `credential`. We are passing these down individually as `props` to each `FounderListItem` component. Three is a manageable number, but imagine if there were 20 or more, how does this scale?
+
+Our list of `props` passed to `FounderListItem` would soon become unmanageably large in our JSX.
 
 ```jsx
-// src/FounderListItem.jsx
-
-const FounderListItem = (props) => {
-    // Component content remains unchanged
-}
+<FounderListItem
+  key={index}
+  name={founder.name}
+  title={founder.title}
+  credential={founder.credential}
+  // probably many more!
+/>
 ```
 
-Whenever we want to access a property passed down from the parent, we can use the `props` object. In our app, `props` will have a `founder` property, since that's what we named the attribute inside of `App.jsx`. We can update our `FounderListItem` component to display the data given to it:
+Let's refactor our `.map()` function one more time for a more scalable `prop` structure:
 
 ```jsx
-// src/FounderListItem.jsx
+// src/App.jsx
 
-const FounderListItem = (props) => {
-    return (
-        <li>
-            <h3>{props.founder.name}: {props.founder.title}</h3>
-            <p>{props.founder.credential}</p>
-        </li>
-    );
-}
+<ul>
+  {extremelyImpressiveFounders.map((founder, index) => (
+    <FounderListItem key={index} founder={founder} />
+  ))}
+</ul>
 ```
 
-## Destructuring Props
-
-Depending on how nested the data gets, it can get tedious to keep typing and reading the word `props` in front of everything, such as `props.founder.name` and `props.founder.credential`. As a result, many React developers will **destructure** the props object in their components. This means that the component can use object destructuring syntax when defining its parameters, which looks like this: 
+This requires one more change to the `FounderListItem` component:
 
 ```jsx
 // src/FounderListItem.jsx
 
 const FounderListItem = ({ founder }) => {
-    return (
-        <li>
-            <h3>{founder.name}: {founder.title}</h3>
-            <p>{founder.credential}</p>
-        </li>
-    );
-}
+  return (
+    <li>
+      <h3>
+        {founder.name} : {founder.title}
+      </h3>
+      <p>{founder.credential}</p>
+    </li>
+  );
+};
 ```
 
-This doesn't require changing the parent component's syntax, so it's purely a matter of preference within the child component. 
+Much better! 
 
-### 🎓 You Do: Refactor the Navbar List
 
-While the items in the navbar are unlikely to change and are typically okay to hard-code, let's use the opportunity to practice this pattern of refactoring lists into separate components. The goal is to refactor the list of links in the Navbar to use the same mapping pattern as our list of founders.
+## 🚀 Level Up: JS spread syntax
 
-Add the following array to `Navbar.jsx` and use it to map over and return a child component for each item in the list. This will involve creating a new `NavbarListItem.jsx` component to accept and display props from the `Navbar.jsx` parent component.
+If you want to avoid refactoring `FounderListItem` and prefer not having to access properties as `founder.something`, Javascript has one more tool to simplify passing multiple `props` as a bundle - the spread operator  `...`.
 
-```js
-// src/Navbar.jsx
+The spread operator `...` in JavaScript is a convenient way to pass ***all the properties*** of an object as `props` to a React component.
 
-const pagesInTheApp = [
-    {
-        name: 'Home',
-        href: '/'
-    },
-    {
-        name: 'About Us',
-        href: '/about-us'
-    },
-    {
-        name: 'Investment Opportunities',
-        href: '/money-pit'
-    },
-    {
-        name: 'Legal Disclosures',
-        href: '/the-fine-print'
-    },
-];
+
+```jsx
+const App = () => {
+  return (
+    <>
+      <Navbar />
+      <main>
+        <h1>Welcome to Hyperbo.ly</h1>
+        <h2>The future is firmly in front of us!</h2>
+        <p>
+          If you can't explain it to a fifth-grader, then our product does it.
+        </p>
+      </main>
+      <h2>Our Founders</h2>
+      <ul>
+        {extremelyImpressiveFounders.map((founder, index) => (
+          <FounderListItem key={index} {...founder} />
+        ))}
+      </ul>
+    </>
+  );
+};
 ```
 
-## When Do Components Go Too Far?
+In the `App` component, when you use the spread operator for `{...founder}`, what you're doing is essentially taking each key-value pair from the founder object and passing them as separate props to the `FounderListItem` component.
+ 
+When used with a component like `FounderListItem`, it allows us to maintain a clean and concise syntax while still being able to individually access each property within the component.
 
-Was it necessary to refactor the static navbar list items into their components? Probably not! Just because you can make something into its own component doesn't mean you should. If repeated elements are based on dynamic, user-generated data, they should be separate components that accept props. If those elements are just static links, as in the Navbar example, they likely don't need separate components. 
+```jsx
+const FounderListItem = ({name, title, credential}) => {
+  return (
+    <li>
+      <h3>
+        {name}: {title}
+      </h3>
+      <p>{credential}</p>
+    </li>
+  );
+};
+```
 
-However, you'll find professional developer teams creating component libraries that do precisely this sort of thing: every button in the app is a separate component that carries its own props, styling, and functionality with it. This keeps things consistent no matter how large the app becomes. Suppose every developer uses the team's custom `<ResponsiveButton>` component instead of generic `<button>` elements. In that case, the team can benefit from modularized React components. When joining a React dev team, you should expect to inherit a custom component library that the team uses throughout the application.
+In the `FounderListItem` component, you are able to define concise parameters like `{name, title, credential}`. These directly correspond to the keys in the founder object. By using object destructuring, you're able to extract each of these properties from the `props` object.

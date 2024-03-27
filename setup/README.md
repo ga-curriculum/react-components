@@ -57,6 +57,8 @@ Open the `App.jsx` file in the `src` directory and replace the contents of it wi
 ```jsx
 // src/App.jsx
 
+import './App.css'
+
 const App = () => {
 
   return (
