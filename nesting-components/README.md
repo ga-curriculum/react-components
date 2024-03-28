@@ -1,6 +1,6 @@
 # ![React Components - Nesting Components](./assets/hero.png)
 
-**Learning objective:** By the end of this lesson, learners will be able to understand and implement the concept of component nesting in React. 
+**Learning objective:** By the end of this lesson, learners will be able to understand and implement the concept of component nesting in React.
 
 ## Nesting our first component
 
@@ -86,14 +86,14 @@ Initially, this function doesn't return anything. Our objective is to make the `
 // src/Navbar.jsx
 
 const Navbar = () => {
-return (
-<nav id="top-navbar">
-  <a href="/">Home</a>
-  <a href="/about-us">About Us</a>
-  <a href="/money-pit">Investment Opportunities</a>
-  <a href="/the-fine-print">Terms of Service</a>
-</nav>
-);
+  return (
+    <nav id="top-navbar">
+      <a href="/">Home</a>
+      <a href="/about-us">About Us</a>
+      <a href="/money-pit">Investment Opportunities</a>
+      <a href="/the-fine-print">Terms of Service</a>
+    </nav>
+  );
 };
 ```
 
@@ -117,7 +117,7 @@ Now that we've created a Navbar component, let's import it into our `App.jsx` fi
 import Navbar from "./Navbar.jsx";
 ```
 
-To include the `Navbar` component in our JSX, we can insert it into the markup like a standard HTML element `<Navbar></Navbar>`, or simply `<NavBar/>`. 
+To include the `Navbar` component in our JSX, we can insert it into the markup like a standard HTML element `<Navbar></Navbar>`, or simply `<NavBar/>`.
 
 > React components rarely need any content between their opening and closing tags, so a common React convention is to use the self-closing tag shortcut: `<Navbar/>`
 
