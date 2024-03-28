@@ -1,45 +1,41 @@
 # ![React Components - Concepts](./assets/hero.png)
 
-**Learning objective:** By the end of this lesson, students will be able to explain the value of modularizing components in React.
+**Learning objective:** By the end of this lesson, learners will understand the foundational concept of React as a component-based framework.
 
-## Modularization in React
+## React is components
 
 Ask any React developer what the primary feature of React is, and there's a decent chance they'll answer "components."
 
-Splitting up front-end code into separate, smaller pieces may not seem revolutionary at first. Still, the practices and design principles that follow from using React components can change how you look at building and maintaining front-end applications.
+Breaking down front-end code into smaller, distinct pieces might not appear groundbreaking initially. However, once you start using React components, you'll find that this approach can profoundly shift your perspective on creating and maintaining front-end applications.
 
-Let's compare a more traditional HTML, CSS, and JavaScript application to how a React application modularizes its code.
+To really understand this, let’s contrast the way traditional HTML, CSS, and JavaScript applications are structured with the unique modularization approach of a React application.
 
-### Traditional Web Application
+### Page vs component architecture
 
-- **HTML** - HTML is the page structure for our web application. Most, if not all, HTML code is kept in a file commonly named `index.html`. If there is a need in the application to have HTML living outside of `index.html`, that code is contained in a separate `.html` file.
-- **CSS** - CSS allows us to transform our applications from plain, black-and-white blobs of text to visually appealing applications. Though CSS can be written inline inside our HTML file or files, by convention we keep those styles in a separate file `.css` file. Our CSS files are then read from our HTML files via a `link` element in the HTML header.
-- **JavaScript** - JavaScript provides interactivity and behavior to our web applications, giving our buttons and forms a way to be handled meaningfully. Like with the CSS, we could code our JavaScript in a `script` element in our HTML; however, by convention, we keep all the JavaScript in a separate file and connect it to the HTML.
+Traditional web applications typically separate HTML, CSS, and JavaScript into distinct files – HTML for structure, CSS for styling, and JavaScript for interactivity, each typically in their own dedicated file. These web apps tend to have a more monolithic structure, where large chunks of code are written in few files.
 
+This conventional structure contrasts with React's modular approach, where these aspects are often combined. In React, the UI is broken down into components, each defined in JSX files. JSX allows combining HTML structure, CSS, and JavaScript logic in a single file per component.
 
-### React Application
+Each React component encapsulates a specific element or a closely related group of elements, each serving a singular, defined purpose- like a button, a form, or a navigation bar.
 
-Instead of breaking our code apart by language, React's approach to modularization involves breaking our code apart into components:
+## Learning to think in components
 
-- **Components** - Components are defined using JSX, and each component can have its own HTML structure, CSS styles (often still in a separate file), and JavaScript logic. A component encapsulates a single element on the page, such as a button or a form.
-- **Component Hierarchy** - Component hierarchy is encouraged by React. We can nest one component inside another to build elements - from a card to a form, all the way up to entire applications.
-- **Component Reusability** - Components can be made to be reusable. You can easily import components when needed, reducing code duplication.
-- **State and Props** - React components can have internal data called state and - if nested - can be passed data (called props) from a parent component. State and props allow the component to contain their own logic.
+Think of components as the Lego blocks of your application's user interface. Each component is a self-contained piece that can be reused and combined in different ways to build complex UIs. This modularity makes it easier to develop, maintain, and scale your app.
 
-> 🧠 State and props will not be the focus of this lesson, but are essential concepts when working with React applications.
+Components promote reusability. You can create a component once, like a button or a user profile card, and use it in multiple places in your app. This reduces code duplication and leads to more efficient development.
 
-In React, we think in terms of **components** as we build. Each component is responsible for its own structure, style, and behavior.
+React components are best designed to act like pure functions, focusing on a single task or feature. They should operate independently, without relying on the state or rendering sequence of other components. This approach ensures each component fulfills one specific purpose within the application. For a given input, components should have consistent, predictable, UI output. 
 
-## Components-First Mindset
+Components communicate with each other using `props` (properties). `Props` allow you to pass data from parent components down to child components. This one-way data flow keeps the component structure predictable and easy to debug.
 
-Thinking in a component-first way lets us reliably track down and preserve pieces of our programs. If something breaks in a component, we can fix that component without having to touch the rest of our app. 
+Since components are isolated, they can be developed and tested independently, making debugging easier. If an issue arises in one part of your app, you can usually trace it back to a specific component, simplifying the troubleshooting process.
 
-This isolation of components is baked into React's state-render cycle. When a variable in state gets updated, only the components that rely on that state need to re-render, and the rest of the page stays unaffected.
+## Your application is a tree
 
-A component-first mindset has a lot of benefits for developers.Collaboration is more easily manageable when team members can work within specific components rather than needing to all make changes to larger codebase. In addition, incremental updates are easier when changes are limited to a small piece of the overall project. Finally, components help reduce repetitive code; you can more easily re-use standard components across multiple projects, like sign-in and sign-up pages or navbars.
+In the tree structure of a React app, components form a hierarchy. You have parent components and child components. This hierarchy is important because it defines the flow of data and the relationship between different parts of your application. For example, a `Navbar` component might have child components like `NavItem` or `DropdownMenu`.
 
-### Refactoring in React
+In a component tree, data flows down from parent components to child components through props. When a parent component changes its state, only the relevant child components that use the changed data form the parent will re-render, making the process efficient and preventing unnecessary re-renders.
 
-Developing a React app with many components can often lead to constantly changing your mind about how many components a given feature should use, how those components should be arranged, which components should have state, and so on. Don't be discouraged if you've made the wrong decision on splitting up components. Get comfortable refactoring your component architecture as you go. There's rarely one "right" answer to exactly how a site should be split up into React components, but paying attention to the most common and productive patterns will pay off.
+## Components for collaboration
 
-In this lesson, we'll start splitting our applications into separate components stored in separate files. We'll pass data from parent to child components, using components inside of `.map` statements to create a list displaying data from an array.
+Working in components is great for collaboration in teams of all sizes. For one, the self-contained nature of components makes contributing to projects easier than having to manage a whole team's ongoing changes to large files that may impact many parts of an app or website. Components can also be shared across features, teams, and projects. Why make your colleague build a navbar from scratch when you built a great one already?
