@@ -2,13 +2,12 @@
 
 ## About
 
-In this lesson, students will refactor React applications to use multiple components. They will learn the most common patterns when passing props to a child component, and understand the design decisions motivating the use of modular, re-usable components in React.
+This lesson introduces React's component-based approach to building web applications. It contrasts the traditional method, where HTML, CSS, and JavaScript are kept in separate files, with React's integrated approach using components. The session will guide you through creating these components, highlighting their reusability, and passing data from parent to child components through the use of props. 
 
 ## Prerequisites
 
 - Intro to React
 - Building Your First React App
-- User Events in React
 
 ## Content
 
@@ -25,10 +24,6 @@ In this lesson, students will refactor React applications to use multiple compon
 | Lesson                                                   | Video Time | Video | Skills              |
 | -------------------------------------------------------- | :--------: | :---: | ------------------- |
 | [Everything is a Component](./everything-is-a-component/README.md)                  |     --     |  --   | creating more granular components and passing props from parents to grandchildren  |
-
-## References
-
-📖 [Reference Materials](./references/README.md)
 
 ## Internal resources
 

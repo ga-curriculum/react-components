@@ -1,8 +1,8 @@
-## Introduction to Component-Based Structure
+## Introduction to component-based structure
 
 One of the key concepts in React is the use of components. Components are independent and reusable bits of code that serve as the building blocks of your application. Let's explore how to identify and structure components in a basic website.
 
-### Identifying Components in a Web Page
+### Identifying components in a web page
 
 A website's layout often contains various sections that can be efficiently managed as components. Here's how to identify potential components:
 
