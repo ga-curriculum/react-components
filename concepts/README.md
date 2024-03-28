@@ -12,11 +12,11 @@ To really understand this, let’s contrast the way traditional HTML, CSS, and J
 
 ### Page vs component architecture
 
-Traditional web applications typically separate HTML, CSS, and JavaScript into distinct files – HTML for structure, CSS for styling, and JavaScript for interactivity, each typically in their own dedicated file. These web apps tend to have a more monolithic structure, where large chunks of code are written in few files.
+Traditional web applications typically separate HTML, CSS, and JavaScript into distinct files – HTML for structure, CSS for styling, and JavaScript for interactivity. These web apps tend to have a more monolithic structure, where large chunks of code are written in few files.
 
 [tktk hunter, something here to visually illustrate this, maybe borrowed from the intro to react lesson]()
 
-This conventional structure contrasts with React's modular approach, where these aspects are often combined. In React, the UI is broken down into components, each defined in JSX files. JSX allows combining HTML structure, CSS, and JavaScript logic in a single file per component.
+This conventional structure contrasts with React's modular approach, where these aspects are often combined. In React, the UI is broken down into components, each defined in JSX files. JSX allows combining HTML structure, CSS styles, and JavaScript logic in a single file per component.
 
 Each React component encapsulates a specific element or a closely related group of elements, each serving a singular, defined purpose- like a button, a form, or a navigation bar.
 
@@ -36,7 +36,7 @@ Since components are isolated, they can be developed and tested independently, m
 
 In the tree structure of a React app, components form a hierarchy. You have parent components and child components. This hierarchy is important because it defines the flow of data and the relationship between different parts of your application. For example, a `Navbar` component might have child components like `NavItem` or `DropdownMenu`.
 
-In a component tree, data flows down from parent components to child components through props. When a parent component changes its state, only the relevant child components that use the changed data form the parent will re-render, making the process efficient and preventing unnecessary page renders.
+In a component tree, data flows down from parent components to child components through `props`. When a parent component changes its state, only the relevant child components that use the changed data from the parent will re-render, making the process efficient and preventing unnecessary page renders.
 
 ## Components for collaboration
 

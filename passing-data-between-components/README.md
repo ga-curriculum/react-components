@@ -52,11 +52,11 @@ A more efficient approach is to create a single, flexible React component that c
 
 ## Enter `props`
 
-We mentioned earlier that every React component is essentially a JavaScript function that returns HTML. When writing JS functions, its common to pass in data as an argument. So far, our React components have not been written to accept any input - until now!
+We mentioned earlier that every React component is essentially a JavaScript function that returns HTML. When writing regular javascript functions, its common to pass in data as an argument. So far, our React components have not been written to accept any input - until now!
 
 React's architecture allows data to flow from parent components to child components using **`props`**.
 
-- This is key for passing data around in your application, reinforcing React's tree-like structure. Think of it as a one-way street where data travels downwards from a parent to a child component, a concept central to React known as **_unidirectional data flow_**.
+- This is key for passing data around in your application, reinforcing React's tree-like structure. Think of it as a one-way street where data travels downwards from parent to a child, a concept central to React known as **_unidirectional data flow_**.
 
 Another important feature is that `props` are **_immutable_**.
 
@@ -66,7 +66,7 @@ To see this in action, consider our web page example. Imagine if we want to pass
 
 So, in our case, each `FounderListItem` would receive its own set of props (like name, title, and credential) from the `App` component but couldn't modify this data. It can only use the props to render the founder's details as specified.
 
-
+[tktk Hunter another graphic here, not sure what]()
 
 To create this structure in our existing application, there are two pieces of the puzzle to solve: setting up a component to accept props from its parent, and setting up the parent to send props down to its children.
 

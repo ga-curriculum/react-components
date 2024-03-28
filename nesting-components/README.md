@@ -4,11 +4,12 @@
 
 ## Nesting our first component
 
-Now that we have identified two parts of our sample markup to refactor, let's move it into our React app and start nesting some components. We'll start with the nav bar. It's a common UI element found on almost every web page, perfectly illustrating the concept of a reusable and distinct component.
+Now that we have explored our sample markup, let's move the first half into our React app and start creating some components. We'll start with the nav bar. It's a common UI element found on almost every web page, perfectly illustrating the concept of a reusable and distinct component.
 
 ### Examining the `nav` code
 
 Let's look at some of the sample website markup again, but as JSX code in our main `App` component.
+
 Add the following in `App.jsx`:
 
 ```jsx
@@ -146,11 +147,11 @@ Nice! Check back in the browser, and you should see the site restored to its ori
 
 ## Component-specific CSS
 
-As you dive deeper into React, you'll encounter more advanced techniques for styling components. But for now, let’s keep things simple: create a separate `.css` file for each component. Treating components as modular units isn’t just about the JavaScript code – it extends to their styling too. This approach means giving each component its very own `.css` file.
+As you dive deeper into React, you'll encounter more advanced techniques for styling components. But for now, let’s keep things simple: create a separate `.css` file for each component. Treating components as modular units isn’t just about the JavaScript code – it extends to their styling too. This approach means giving each component its own `.css` file.
 
 Go ahead and move the CSS code for the navbar from `index.css` to a new file, `Navbar.css`. This file should be placed right next to `Navbar.jsx` in your project’s structure.
 
-Now, add an import statement to the top of your `Navbar.jsx` file that imports the `Navbar.css` style sheet:
+Next, add an import statement to the top of your `Navbar.jsx` file that imports the `Navbar.css` style sheet:
 
 ```jsx
 // src/Navbar.jsx
@@ -158,6 +159,6 @@ Now, add an import statement to the top of your `Navbar.jsx` file that imports t
 import "./Navbar.css";
 ```
 
-Now, you might be hoping that this setup means your styles are locked down to just the Navbar component. That would be helpful, but actually, the CSS here is still global. That means styles in `Navbar.css` could affect other parts of your app where similar css selectors are used.
+Now, you might be hoping that this setup means your styles are locked down to just the Navbar component. That would be helpful, but actually, the CSS here is still global. That means styles in `Navbar.css` could affect other parts of your app where similar CSS selectors are used.
 
 To keep things tidy, make sure your CSS rules are targeted specifically at the Navbar. For example, use an `id` or `class` that’s unique to the Navbar. That’s a good practice to ensure your styles don’t wander off and start affecting other elements unexpectedly.
