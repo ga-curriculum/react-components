@@ -23,7 +23,7 @@ This lesson explores React's component-based approach for constructing web appli
 
 | Lesson                                                   | Video Time | Video | Skills              |
 | -------------------------------------------------------- | :--------: | :---: | ------------------- |
-| [Everything is a Component](./everything-is-a-component/README.md)                  |     --     |  --   | creating more granular components and passing props from parents to grandchildren  |
+| [Everything is a Component](./everything-is-a-component/README.md)                  |     --     |  --   | Creating more granular components and passing props from parents to grandchildren  |
 
 ## Internal resources
 
