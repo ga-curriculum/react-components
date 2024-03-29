@@ -2,26 +2,28 @@
 
 ## About
 
-In this lesson, students will refactor React applications to use multiple components. They will learn the most common patterns when passing props to a child component, and understand the design decisions motivating the use of modular, re-usable components in React.
+This lesson explores React's component-based approach for constructing web applications. Unlike traditional methods where HTML, CSS, and JavaScript reside in separate files, React integrates these technologies within components. Students will learn to create components, nest them inside one another, and pass data from parent to child components using `props`.
 
 ## Prerequisites
 
 - Intro to React
 - Building Your First React App
-- User Events in React
 
 ## Content
 
-| Lesson | Skills |
-| ------ | ------ |
-| [Setup](./setup/README.md) | Setting up the development environment |
-| [Concepts](./concepts/README.md) | Describe modularizing components |
-| [Nesting Components](./nesting-components/README.md) | Implement multiple components in multiple files |
-| [Passing Data Between Components](./passing-data-between-components/README.md) | Use props when mapping over React components |
+| Lesson                                                   | Video Time | Video | Skills              |
+| -------------------------------------------------------- | :--------: | :---: | ------------------- |
+| [Setup](./setup/README.md)                                                     | -- | -- | Setting up the development environment          |
+| [Concepts](./concepts/README.md)                                               | -- | -- | Describe modularizing components                |
+| [Structuring Components in React](./structuring-components-in-react/README.md)             | -- | -- | Identifying component structure in a web page   |
+| [Nesting Components](./nesting-components/README.md)                           | -- | -- | Implement multiple components in multiple files |
+| [Passing Data Between Components](./passing-data-between-components/README.md) | -- | -- | Use props when mapping over React components    |
 
-## References
+## Level Up content
 
-📖 [Reference Materials](./references/README.md)
+| Lesson                                                   | Video Time | Video | Skills              |
+| -------------------------------------------------------- | :--------: | :---: | ------------------- |
+| [Everything is a Component](./everything-is-a-component/README.md)                  |     --     |  --   | creating more granular components and passing props from parents to grandchildren  |
 
 ## Internal resources
 
