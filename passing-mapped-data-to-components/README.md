@@ -1,10 +1,39 @@
-# ![React Components - Passing Data Between Components](./assets/hero.png)
+# ![React Components - Passing Mapped Data to Components](./assets/hero.png)
+
+tktk Hunter, could you rebuild this hero with the new name?
 
 **Learning objective:** By the end of this lesson, learners will be able to understand and implement the concept of passing data between components in React using `props` inside of a `map()`.
 
-## Dynamically rendering components with props
+## Mapping data to components
 
-We have three founders to list on our site, so passing individual `props` values does not allow us to programmatically render the data from our `extremelyImpressiveFounders` array. For this, we'll need to create a loop in our JSX to dynamically render data from our list.
+While our approach so far has demonstrated that we can reuse React components, we're having to do a lot of manual work to do so. What if we had an array of objects (an incredibly common format for lists of data coming from a database) and we wanted to pass each one to a new instance of the `FounderListItem` component? This would not only make our component even more useful, but also make less work for us.
+
+Bring the below `founders` array into your `app.js` file.
+
+```javascript
+const founders = [
+  {
+    name: "Elizabeth Holmes",
+    title: "CEO",
+    credential: "MBA from SuperLegit University",
+    id: 1,
+  },
+  {
+    name: "Sam Bankman-Fried",
+    title: "CFO",
+    credential: "CPA from TotallyReal State",
+    id: 2,
+  },
+  {
+    name: "Matt Damon",
+    title: "CMO",
+    credential: "Was in that Movie You saw",
+    id: 3,
+  },
+];
+```
+
+With the array of data in place, we can use the `map()` array method to transform the array of data into a new array of JSX elements. Note we've added a hardcoded `id` to each object to make creating a key for each JSX element easier.
 
 Let's refactor `App.jsx` to include a mapped list of `FounderListItem` components:
 
@@ -22,12 +51,11 @@ const App = () => {
       </main>
       <h2>Our Founders</h2>
       <ul>
-        {extremelyImpressiveFounders.map((founder, index) => (
+        {founders.map((founder) => (
           <FounderListItem
-            key={index}
+            key={founder.id}
             name={founder.name}
             title={founder.title}
-            credential={founder.credential}
           />
         ))}
       </ul>
@@ -36,19 +64,19 @@ const App = () => {
 };
 ```
 
-> Reminder: When we use the `.map()` method in React to create a list of components, like our `FounderListItem` components, it's essential to give each one a unique `key` prop. This `key` helps React keep track of each item in the list. Specifically, it's used for identifying which items have changed, been added, or been removed. This is crucial for performance, especially when dealing with dynamic lists that might get updated or reordered.
+> ⚠️ When we use the `.map()` method in React to create a list of components, like our `FounderListItem` components, it's essential to give each one a unique `key` prop. This `key` helps React keep track of each item in the list. Specifically, it's used for identifying which items have changed, been added, or been removed. This is crucial, especially when dealing with dynamic lists that might get updated or reordered.
 
 We should now see our founders rendered to the page dynamically from our array. Great work!
 
 ## Consolidating our `props`
 
-Currently, there are only three properties listed for each object of the `extremelyImpressiveFounders` array- `name`, `title` and `credential`. We are passing these down individually as `props` to each `FounderListItem` component. Three is a manageable number, but imagine if there were 20 or more, how does this scale?
+Currently, we are passing two of the properites down individually from each `founder` object in `App` as `props` to each `FounderListItem` component. This is a manageable number, but imagine if there were 20 or more, how does this scale?
 
 Our list of `props` passed to `FounderListItem` would soon become unmanageably large in our JSX.
 
 ```jsx
 <FounderListItem
-  key={index}
+  key={founder.id}
   name={founder.name}
   title={founder.title}
   credential={founder.credential}
@@ -56,79 +84,41 @@ Our list of `props` passed to `FounderListItem` would soon become unmanageably l
 />
 ```
 
-Let's refactor our `.map()` function one more time for a more scalable `prop` structure:
+Let's refactor our `.map()` function for a more scalable `prop` structure:
 
 ```jsx
 // src/App.jsx
 
 <ul>
-  {extremelyImpressiveFounders.map((founder, index) => (
-    <FounderListItem key={index} founder={founder} />
+  {founders.map((founder) => (
+    <FounderListItem 
+      key={founder.id} 
+      founder={founder}
+    />
   ))}
 </ul>
 ```
 
-This requires one more change to the `FounderListItem` component:
+tktk Hunter, can you add a CHD here using this new structure?
+
+This requires one more change to the `FounderListItem` component because it is no longer receiving `name` or `title` props - instead both of those properties are on the `founder` object being passes as a prop.
 
 ```jsx
-// src/FounderListItem.jsx
+// src/components/FounderListItem/FounderListItem.jsx
 
-const FounderListItem = ({ founder }) => {
+const FounderListItem = (props) => {
   return (
     <li>
-      <h3>
-        {founder.name} : {founder.title}
-      </h3>
-      <p>{founder.credential}</p>
+      <h3>Hello, I'm {props.founder.name} the {props.founder.title}!</h3>
     </li>
   );
 };
+
+export default FounderListItem;
 ```
 
 Much better!
 
-## 🚀 Level Up: JS spread syntax
+### 🎓 You Do
 
-If you want to avoid refactoring `FounderListItem` and prefer not having to access properties as `founder.something`, JavaScript has one more tool to simplify passing multiple `props` as a bundle - the spread operator  `...`.
-
-The spread operator `...` in JavaScript is a convenient way to pass ***all the properties*** of an object as `props` to a React component.
-
-```jsx
-const App = () => {
-  return (
-    <>
-      <Navbar />
-      <main>
-        <h1>Welcome to Hyperbo.ly</h1>
-        <h2>The future is firmly in front of us!</h2>
-        <p>If you can't explain it to a fifth-grader, our product does it.</p>
-      </main>
-      <h2>Our Founders</h2>
-      <ul>
-        {extremelyImpressiveFounders.map((founder, index) => (
-          <FounderListItem key={index} {...founder} />
-        ))}
-      </ul>
-    </>
-  );
-};
-```
-
-In the `App` component, when you use the spread operator for `{...founder}`, what you're doing is essentially taking each key-value pair from the founder object and passing them as separate props to the `FounderListItem` component.
-
-When used with a component like `FounderListItem`, it allows us to maintain a clean and concise syntax while still being able to individually access each property within the component.
-
-```jsx
-const FounderListItem = ({name, title, credential}) => {
-  return (
-    <li>
-      <h3>
-        {name}: {title}
-      </h3>
-      <p>{credential}</p>
-    </li>
-  );
-};
-```
-
-In the `FounderListItem` component, you are able to define concise parameters like `{name, title, credential}`. These directly correspond to the keys in the founder object. By using object destructuring, you're able to extract each of these properties from the `props` object.
+Add a `<p>` element inside the `<li>` element after the `<h3>`. Print the credential of each founder inside of it.

@@ -20,11 +20,13 @@ This lesson explores React's component-based approach for constructing web appli
 | [Passing Data to Components](./passing-data-to-components/README.md)               | -- | -- | Use props to pass data to react components    |
 | [Reusing Components](./reusing-components/README.md)                               | -- | -- | Use props to pass data to react components    |
 | [Passing Mapped Data to Components](./passing-mapped-data-to-components/README.md) | -- | -- | Use props to pass data to react components    |
+| [Destructuring Props](./destructuring-props/README.md)                             | -- | -- | Destructure props passed to components    |
 
 ## Level Up content
 
 | Lesson                                                   | Video Time | Video | Skills              |
 | -------------------------------------------------------- | :--------: | :---: | ------------------- |
+| [Spreading to props](./spreading-to-props/README.md)                  |     --     |  --   | Using spread syntax to pass props  |
 | [Everything is a Component](./everything-is-a-component/README.md)                  |     --     |  --   | Creating more granular components and passing props from parents to grandchildren  |
 
 ## Internal resources

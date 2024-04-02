@@ -1,6 +1,8 @@
-# ![React Components - Passing Data Between Components](./assets/hero.png)
+# ![React Components - Reusing Components](./assets/hero.png)
 
-**Learning objective:** By the end of this lesson, learners will be able to understand and implement the concept of passing data between components in React using `props`.
+tktk Hunter, could you rebuild this hero with the new name?
+
+**Learning objective:** By the end of this lesson, learners will be able to understand the basic concepts of component reuse in React.
 
 ## Reusability in React
 
