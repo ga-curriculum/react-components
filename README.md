@@ -26,7 +26,7 @@ This lesson explores React's component-based approach for constructing web appli
 
 | Lesson                                                   | Video Time | Video | Skills              |
 | -------------------------------------------------------- | :--------: | :---: | ------------------- |
-| [Spreading to props](./spreading-to-props/README.md)                  |     --     |  --   | Using spread syntax to pass props  |
+| [Spreading to Props](./spreading-to-props/README.md)                  |     --     |  --   | Using spread syntax to pass props  |
 | [Everything is a Component](./everything-is-a-component/README.md)                  |     --     |  --   | Creating more granular components and passing props from parents to grandchildren  |
 
 ## Internal resources
