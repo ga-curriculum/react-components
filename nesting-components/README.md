@@ -4,16 +4,18 @@
 
 ## Nesting our first component
 
-Now that we have explored our sample markup, let's move the first half into our React app and start creating some components. We'll start with the nav bar. It's a common UI element found on almost every web page, perfectly illustrating the concept of a reusable and distinct component.
+Now that we have explored our sample markup let's move the first half into our React app and start creating some components. We'll start with the nav bar. It's a common UI element found on almost every web page, perfectly illustrating the concept of a reusable and distinct component.
 
 ### Examining the `nav` code
 
-Let's look at some of the sample website markup again, but as JSX code in our main `App` component.
+Let's look at the sample website markup again, this time as JSX code in our main `App` component.
 
 Add the following in `App.jsx`:
 
 ```jsx
-// scr/App.jsx
+// src/App.jsx
+
+import './App.css';
 
 const App = () => {
   return (
@@ -27,20 +29,20 @@ const App = () => {
       <main>
         <h1>Welcome to Hyperbo.ly</h1>
         <h2>The future is firmly in front of us!</h2>
-        <p>
-          If you can't explain it to a fifth-grader, then our product does it.
-        </p>
+        <p>If you can't explain it to a fifth-grader, our product does it.</p>
       </main>
     </>
   );
 };
+
+export default App;
 ```
 
-Here we have nested a `<nav>` JSX element and some default navbar items.
+Here, we have nested a `<nav>` JSX element and some fake navbar items.
 
-### Clear default css
+### Clear default CSS
 
-Next, let's delete the contents of both `App.css` and `index.css`. This removes the default styling and gives us a clean slate.
+Next, let's delete the contents of both `App.css` and `index.css`. This will remove the default styling and give us a clean slate.
 
 Add the following back to `index.css`:
 
@@ -57,34 +59,50 @@ This will give our links some breathing room. You should see the following in yo
 
 ![Starter Code Screenshot](./assets/starter-code-screenshot.png)
 
-Now that we have some starting markup, we can begin the process of splitting it into components.
+Now that we have some starting markup, we can split it into components.
 
 ## Splitting the Navbar
 
 The code we want to split off is bundled up nicely inside the single `<nav>` element. This makes modularizing it into a separate component a quick operation.
 
-First, let's create a new `Navbar.jsx` file for this component. We'll create this file in the `src` folder of the project as a sibling to `App.jsx`:
+First, we'll make a `components` directory inside the existing `src` directory:
 
 ```bash
-touch src/Navbar.jsx
+mkdir src/components
 ```
 
-Next, we'll add our React component and export it from inside the `Navbar.jsx` file.
+Next, let's create a new `Navbar` directory inside the new `components` directory:
 
-> Though it might seem unconventional in JavaScript to capitalize file names, React follows the practice of capitalizing both _file_ and _function_ names of components.
+```bash
+mkdir src/components/Navbar
+```
 
-Remember, React components are essentially just functions that return HTML. Let's begin by creating a basic function:
+Finally, we'll create a `Navbar.jsx` file for this component inside the new `Navbar` directory.
+
+```bash
+touch src/components/NavBar/Navbar.jsx
+```
+
+> ♻️ Repeatable pattern: when adding a new component to a project, we'll follow a pattern similar to what we've just done. We'll start with a directory matching the component's name inside of the `components` directory. After we've created that we'll make a `.jsx` file with an identical name.
+>
+> Any files belonging to this component (such as styling) should be added to this same directory. Note that React doesn't ***require*** us to follow this convention. It's just a pattern we'll follow as we build our applications to keep our work somewhat organized.
+>
+> Though it might seem unconventional in JavaScript to capitalize file names, React follows the practice of capitalizing both ***file*** and ***function*** names of components.
+
+Next, we'll add our React component in the `Navbar.jsx` file and export it.
+
+Remember, React components are just functions that return JSX. Let's begin by creating a function:
 
 ```jsx
-// src/Navbar.jsx
+// src/components/Navbar/Navbar.jsx
 
 const Navbar = () => {};
 ```
 
-Initially, this function doesn't return anything. Our objective is to make the `Navbar` component return the `<nav>` element, which is currently in the `App.jsx` file. We'll achieve this by transferring the entire `<nav>` element into the `Navbar` component as its return value:
+Right now, this function doesn't return anything. Our objective is to make the `Navbar` component return the `<nav>` element currently in the `App.jsx` file. We'll achieve this by transferring the entire `<nav>` element into the `Navbar` component as its return value:
 
 ```jsx
-// src/Navbar.jsx
+// src/components/Navbar/Navbar.jsx
 
 const Navbar = () => {
   return (
@@ -115,14 +133,14 @@ Now that we've created a Navbar component, let's import it into our `App.jsx` fi
 ```jsx
 // src/App.jsx
 
-import Navbar from "./Navbar.jsx";
+import Navbar from "./components/Navbar/Navbar.jsx";
 ```
 
-To include the `Navbar` component in our JSX, we can insert it into the markup like a standard HTML element `<Navbar></Navbar>`, or simply `<NavBar/>`.
+To include the `Navbar` component in our JSX, we can insert it into the markup like a standard HTML element `<Navbar></Navbar>` or simply `<NavBar />`.
 
-> React components rarely need any content between their opening and closing tags, so a common React convention is to use the self-closing tag shortcut: `<Navbar/>`
+> 🧠 React components rarely need any content between their opening and closing tags, so a common React convention is to use the self-closing tag shortcut: `<Navbar />`
 
-Let's place our new component above the `<h1>` where the `nav` element used to be:
+Let's place our new component above the `<main>` element, where the `<nav>` element used to be:
 
 ```jsx
 // src/App.jsx
@@ -134,9 +152,7 @@ const App = () => {
       <main>
         <h1>Welcome to Hyperbo.ly</h1>
         <h2>The future is firmly in front of us!</h2>
-        <p>
-          If you can't explain it to a fifth-grader, then our product does it.
-        </p>
+        <p>If you can't explain it to a fifth-grader, our product does it.</p>
       </main>
     </>
   );
@@ -147,18 +163,18 @@ Nice! Check back in the browser, and you should see the site restored to its ori
 
 ## Component-specific CSS
 
-As you dive deeper into React, you'll encounter more advanced techniques for styling components. But for now, let’s keep things simple: create a separate `.css` file for each component. Treating components as modular units isn’t just about the JavaScript code – it extends to their styling too. This approach means giving each component its own `.css` file.
+As you dive deeper into React, you'll encounter more advanced techniques for styling components. But for now, we'll keep things simple by creating a separate `.css` file for each component. Treating components as modular units isn't just about the JavaScript code – it extends to their styling too. This approach means giving each component its own `.css` file.
 
-Go ahead and move the CSS code for the navbar from `index.css` to a new file, `Navbar.css`. This file should be placed right next to `Navbar.jsx` in your project’s structure.
+Go ahead and move the CSS code for the navbar from `index.css` to a new file, `Navbar.css`. This file should be placed in the same directory as the `Navbar.jsx` file in your project's structure.
 
 Next, add an import statement to the top of your `Navbar.jsx` file that imports the `Navbar.css` style sheet:
 
 ```jsx
-// src/Navbar.jsx
+// src/components/Navbar/Navbar.jsx
 
 import "./Navbar.css";
 ```
 
-Now, you might be hoping that this setup means your styles are locked down to just the Navbar component. That would be helpful, but actually, the CSS here is still global. That means styles in `Navbar.css` could affect other parts of your app where similar CSS selectors are used.
+You might hope that this setup means your styles are locked down to just the Navbar component. That would be helpful, but the CSS here is still global. That means styles in `Navbar.css` could affect other parts of your app where similar CSS selectors are used.
 
-To keep things tidy, make sure your CSS rules are targeted specifically at the Navbar. For example, use an `id` or `class` that’s unique to the Navbar. That’s a good practice to ensure your styles don’t wander off and start affecting other elements unexpectedly.
+Ensure your CSS rules are targeted specifically at the Navbar to ensure there is no overlap with any other element. For example, use an `id` or `class` unique to the Navbar. This is a good practice to ensure your styles don't start affecting other elements unexpectedly.

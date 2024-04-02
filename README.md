@@ -11,11 +11,11 @@ This lesson explores React's component-based approach for constructing web appli
 
 ## Content
 
-| Lesson                                                   | Video Time | Video | Skills              |
-| -------------------------------------------------------- | :--------: | :---: | ------------------- |
+| Lesson | Video Time | Video | Skills |
+| ------ | :--------: | :---: | ------ |
 | [Setup](./setup/README.md)                                                     | -- | -- | Setting up the development environment          |
 | [Concepts](./concepts/README.md)                                               | -- | -- | Describe modularizing components                |
-| [Structuring Components in React](./structuring-components-in-react/README.md)             | -- | -- | Identifying component structure in a web page   |
+| [Structuring Components in React](./structuring-components-in-react/README.md) | -- | -- | Identifying component structure in a web page   |
 | [Nesting Components](./nesting-components/README.md)                           | -- | -- | Implement multiple components in multiple files |
 | [Passing Data Between Components](./passing-data-between-components/README.md) | -- | -- | Use props when mapping over React components    |
 
