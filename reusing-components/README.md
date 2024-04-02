@@ -27,11 +27,6 @@ Replace the last two list items in the JSX with the existing `FounderListItem` c
 ```jsx
 // src/App.jsx
 
-import Navbar from "./components/Navbar/Navbar.jsx";
-import FounderListItem from "./components/FounderListItem/FounderListItem.jsx";
-
-import './App.css';
-
 const App = () => {
   return (
     <>
