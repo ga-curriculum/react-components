@@ -2,11 +2,11 @@
 
 tktk Hunter, can you rebuild this hero to match the new title (Passing Data to Components)?
 
-**Learning objective:** By the end of this lesson, learners will be able to understand and implement the concept of passing data to components in React using `props`.
+**Learning objective:** By the end of this lesson, learners will be able to understand and implement the concept of passing data to components in React using props.
 
 ## Founders list
 
-Components are able to receive data so that they're able to display it dynamically. Let's add the rest of our sample markup to our `App` component:
+Components can receive data so that they're able to display it dynamically. Let's add the rest of our sample markup to our `App` component:
 
 ```jsx
 // src/App.jsx
@@ -44,7 +44,7 @@ const App = () => {
 
 To convince investors to fund our incredible, mind-blowing AI crypto VR/AR startup, let's have the home page display a list of the fantastic founding team putting this thing together using components.
 
-First, let's set up our child component by creating the directory and file structure for it. With that set up we'll add some small, testable placeholder code. No need to worry about passing data between these components yet. Let's just get one rendered to the page.
+First, let's set up our child component by creating its directory and file structure. With that done, we'll add some placeholder code. There's no need to worry about passing data between these components yet. Let's just get one rendered to the page.
 
 ```bash
 mkdir src/components/FounderListItem
@@ -105,17 +105,17 @@ const App = () => {
 
 You should see the **Hello, I'm a super impressive Founder!** text on your page now. Let's make this component more interesting by passing some data to it!
 
-## Enter `props`
+## Enter props
 
-We mentioned earlier that every React component is essentially a JavaScript function that returns JSX. When writing regular JavaScript functions, its common to pass in data as an argument. So far, our React components have not been written to accept any data, but React's architecture allows data to flow from parent components to child components using **`props`** (short for properties).
+Every React component is essentially a JavaScript function that returns JSX. When you're writing regular JavaScript functions, it's common to pass in data as an argument. So far, our React components have not been written to accept data. However, React's architecture allows data to flow from parent to child components using *props* (short for properties).
 
-Props are the information that you pass to a JSX tag. They help pass data around an application, and reinforce React's tree-like structure. Think of it as a one-way street where data travels downwards from parent to a child, a concept central to React known as ***unidirectional data flow***.
+Props are the information that you pass to a JSX tag. They help pass data around an app and reinforce React's tree-like structure. Think of it as a one-way street where data travels downwards from parent to a child, a concept central to React known as ***unidirectional data flow***.
 
-To create this structure in our existing application, there are two pieces of the puzzle to solve: setting up a component to accept props from its parent, and setting up the parent to send props down to its children.
+To create this structure in our existing application, we need to solve  two pieces of the puzzle: setting up a component to accept props from its parent and setting up the parent to send props down to its children.
 
 ## Passing a prop to a child component
 
-`Props` are passed to child components by adding them as named attributes to the component elements in the JSX.
+Props are passed to child components by adding them as named attributes to the component elements in the JSX.
 
 ```jsx
 // src/App.jsx
@@ -134,13 +134,13 @@ To create this structure in our existing application, there are two pieces of th
 </ul>
 ```
 
-> 🧠 Here we are passing `name` as a prop and giving it the string value `"Elizabeth Holmes"`.
+> 🧠 Here, we pass `name` as a prop and give it the string value `"Elizabeth Holmes"`.
 >
-> `props` are not limited to strings. They can be any primative data and even take the form of objects or arrays.
+> Props are not limited to strings. They can be any primitive data and even take the form of objects or arrays.
 
 ## Reading `props` inside child components
 
-React components are just functions, so once a `prop` has been passed to a component in JSX, it's like passing an argument that can be used inside the component.
+React components are just functions, so once a prop has been passed to a component in JSX, it's like passing an argument that can be used inside the component.
 
 ```jsx
 const FounderListItem = (props) => {
@@ -152,16 +152,16 @@ const FounderListItem = (props) => {
 };
 ```
 
-`props` is ***immutable***. A child component cannot change what it receives from its parent, nor can it alter the `props` of its parent or sibling components. `props` are like read-only instructions sent down from parent to child, ensuring a stable and predictable flow of data.
+`props` are ***immutable***. A child component cannot change what it receives from its parent, nor can it alter the `props` of its parent or sibling components. `props` are like read-only instructions sent down from parent to child, ensuring a stable and predictable flow of data.
 
-![Props](./assets/props-a.png)
+![Props](./assets/props-b.png)
 
-tktk Hunter, can you rebuild this asset to match the data we're working with here?
+tktk Hunter, can you rebuild this asset to match the data we're working with here? Also a little bit of copy explaining this asset would be awesome to add here when you've done that.
 
-> 📚 `props` (shorthand for properties) allow data to be passed from a parent component to a child component. They allow components to be dynamic and reusable. They are immutible so they can only be read - they cannot be modified.
+> 📚 Props (shorthand for properties) allow data to be passed from a parent component to a child component. They allow components to be dynamic and reusable. They are immutable, so they can only be read - they cannot be modified.
 
 ### 🎓 You Do
 
-Pass another prop to the `FounderListItem` component called `title`. Give it a value of `"CEO"`. Then, make use of it in the `FounderListItem` component so that the output of the component is:
+Pass another prop to the `FounderListItem` component called `title`. Give it the value of `"CEO"`. Then, make use of it in the `FounderListItem` component so that the output of the component is:
 
 **Hello, I'm Elizabeth Holmes, the CEO!**
