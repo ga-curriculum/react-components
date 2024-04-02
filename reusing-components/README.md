@@ -66,6 +66,6 @@ If you go to this page in the browser now, you'll see the following:
 
 Pass data to the second and third `FounderListItem` component so that they display the correct information.
 
-The second list item should output: **Hello, I'm Sam Bankman-Fried the CFO**
+The second list item should output: **Hello, I'm Sam Bankman-Fried the CFO!**
 
-The third list item should output: **Hello, I'm Matt Damon the CMO**
+The third list item should output: **Hello, I'm Matt Damon the CMO!**
