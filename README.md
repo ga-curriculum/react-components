@@ -17,7 +17,8 @@ This lesson explores React's component-based approach for constructing web appli
 | [Concepts](./concepts/README.md)                                               | -- | -- | Describe modularizing components                |
 | [Structuring Components in React](./structuring-components-in-react/README.md) | -- | -- | Identifying component structure in a web page   |
 | [Nesting Components](./nesting-components/README.md)                           | -- | -- | Implement multiple components in multiple files |
-| [Passing Data Between Components](./passing-data-between-components/README.md) | -- | -- | Use props when mapping over React components    |
+| [Passing Data to Components](./passing-data-to-components/README.md)           | -- | -- | Use props to pass data to react components    |
+| [Reusing Components](./reusing-components/README.md)                           | -- | -- | Use props to pass data to react components    |
 
 ## Level Up content
 
