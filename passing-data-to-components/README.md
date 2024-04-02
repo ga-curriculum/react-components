@@ -146,7 +146,7 @@ React components are just functions, so once a `prop` has been passed to a compo
 const FounderListItem = (props) => {
   return (
     <li>
-      <h3>Hello, I'm { props.name }!</h3>
+      <h3>Hello, I'm {props.name}!</h3>
     </li>
   );
 };
