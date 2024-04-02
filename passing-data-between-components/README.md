@@ -1,6 +1,8 @@
-# ![React Components - Passing Data Between Components](./assets/hero.png)
+# ![React Components - Passing Data to Components](./assets/hero.png)
 
-**Learning objective:** By the end of this lesson, learners will be able to understand and implement the concept of passing data between components in React using `props`.
+tktk Hunter, can you rebuild this hero to match the new title (Passing Data to Components)?
+
+**Learning objective:** By the end of this lesson, learners will be able to understand and implement the concept of passing data to components in React using `props`.
 
 ## Founders list
 
