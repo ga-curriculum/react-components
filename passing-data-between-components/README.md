@@ -4,7 +4,7 @@
 
 ## Founders list
 
-Components are able to receive data so that they're able to display it dynamically. First, let's add the rest of our sample markup to our `App` component:
+Components are able to receive data so that they're able to display it dynamically. Let's add the rest of our sample markup to our `App` component:
 
 ```jsx
 // src/App.jsx
@@ -40,7 +40,7 @@ const App = () => {
 
 ## Creating the child component
 
-To convince investors to fund our incredible, mind-blowing AI crypto VR/AR startup, let's have the home page display a list of the fantastic founding team putting this thing together.
+To convince investors to fund our incredible, mind-blowing AI crypto VR/AR startup, let's have the home page display a list of the fantastic founding team putting this thing together using components.
 
 First, let's set up our child component by creating the directory and file structure for it. With that set up we'll add some small, testable placeholder code. No need to worry about passing data between these components yet. Let's just get one rendered to the page.
 
@@ -63,7 +63,7 @@ const FounderListItem = () => {
 export default FounderListItem;
 ```
 
-### Render our components in `App.jsx`
+### Render our component in `App.jsx`
 
 Import `FounderListItem` at the top of `App.jsx` and replace the first list item with the new component.
 
