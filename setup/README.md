@@ -27,7 +27,7 @@ cd react-components
 npm i
 ```
 
-Open the project's folder in your code editor:
+Open the project directory in your code editor:
 
 ```bash
 code .
