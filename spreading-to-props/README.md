@@ -11,6 +11,8 @@ Earlier, we refactored `FounderListItem` to accept the `founder` object on `prop
 The spread operator `...` in JavaScript is a convenient way to pass ***all the properties*** of an object as `props` to a React component.
 
 ```jsx
+// src/App.jsx
+
 const App = () => {
   return (
     <>
@@ -36,6 +38,8 @@ In the `App` component, when you use the spread operator for `{...founder}`, wha
 When used with a component like `FounderListItem`, it allows us to maintain a clean and concise syntax while still being able to access each property within the component individually.
 
 ```jsx
+// src/components/FounderListItem/FounderListItem.jsx
+
 const FounderListItem = (props) => {
   return (
     <li>
@@ -49,6 +53,8 @@ const FounderListItem = (props) => {
 We could even destructure these items from props directly:
 
 ```jsx
+// src/components/FounderListItem/FounderListItem.jsx
+
 const FounderListItem = ({ name, title, credential }) => {
   return (
     <li>
