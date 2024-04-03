@@ -1,5 +1,7 @@
 # ![React Components - Everything is a Component](./assets/hero.png)
 
+tktk Hunter, this needs a hero (I also don't really like this name, so let's chat on it before you build this.)
+
 **Learning objective:** By the end of this lesson, learners will be able to break down a React component into smaller parts and understand the concept of passing `props` from a parent component to a grandchild component.
 
 ## Breaking the `App` into smaller components
