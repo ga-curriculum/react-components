@@ -8,9 +8,11 @@ tktk Hunter, could you rebuild this hero with the new name? Also not the biggest
 
 While our approach so far has demonstrated that we can reuse React components, we have to do a lot of manual work. What if we had an array of objects (an prevalent format for lists of data coming from a database), and we wanted to pass each one to a new instance of the `FounderListItem` component? This would not only make our component even more useful but also make less work for us.
 
-Bring the below `founders` array into your `app.js` file.
+Bring the below `founders` array into your `App.jsx` file.
 
 ```javascript
+// src/App.jsx
+
 const founders = [
   {
     name: "Elizabeth Holmes",
@@ -41,6 +43,25 @@ Let's refactor `App.jsx` to include a mapped list of `FounderListItem` component
 // src/App.jsx
 
 const App = () => {
+
+    const founders = [
+    {
+      name: 'Elizabeth Holmes',
+      title: 'CEO',
+      credential: 'MBA from SuperLegit University',
+    },
+    {
+      name: 'Sam Bankman-Fried',
+      title: 'CFO',
+      credential: 'CPA from TotallyReal State',
+    },
+    {
+      name: 'Matt Damon',
+      title: 'CMO',
+      credential: 'Was in that Movie You saw',
+    },
+  ];
+
   return (
     <>
       <Navbar />
@@ -89,14 +110,22 @@ Let's refactor our `.map()` function for a more scalable `prop` structure:
 ```jsx
 // src/App.jsx
 
-<ul>
-  {founders.map((founder) => (
-    <FounderListItem 
-      key={founder.id} 
-      founder={founder}
-    />
-  ))}
-</ul>
+  return (
+    <>
+      <Navbar />
+      <main>
+        <h1>Welcome to Hyperbo.ly</h1>
+        <h2>The future is firmly in front of us!</h2>
+        <p>If you can't explain it to a fifth-grader, our product does it.</p>
+      </main>
+      <h2>Our Founders</h2>
+      <ul>
+        {founders.map((founder) => (
+          <FounderListItem key={founder.id} founder={founder} />
+        ))}
+      </ul>
+    </>
+  );
 ```
 
 tktk Hunter, can you add a CHD here using this new structure?

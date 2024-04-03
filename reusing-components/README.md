@@ -10,7 +10,7 @@ We've seen the ***modularity*** of React components. But there's another impress
 
 ### The list of founders
 
-Inside the `<ul>`, there are a series of founders - each with a name, title, and description. You might consider turning each founder's details into a separate React component, but imagine the hassle of creating a distinct file for each founder, especially when the list might change or expand.
+Inside the `<ul>` in the App component, there are a series of founders - each with a name, title, and description. You might consider turning each founder's details into a separate React component, but imagine the hassle of creating a distinct file for each founder, especially when the list might change or expand.
 
 A more efficient approach is to create a single flexible and reusable React component that can represent any founder in the list. Picture it as a template that shapes itself according to the data it receives.
 

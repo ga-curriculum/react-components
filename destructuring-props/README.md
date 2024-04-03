@@ -30,15 +30,15 @@ export default FounderListItem;
 We'll start with the destructuring itself, which happens in the first line. Change it to:
 
 ```jsx
-const FounderListItem = ({founder}) => {
+const FounderListItem = ({ founder }) => {
 ```
 
-This syntax means: find the `founder` property on the first argument, and assign it to `founder`. `founder` now has all the properties that `props.founder` previously had. Note that there is no longer a `props` parameter available to use in this component, which means we need to do a slight refactor in this component:
+This syntax means: find the `founder` property on the first argument, and assign it to `founder`. `founder` now has all the properties that `props.founder` previously had. Note that there is no longer a `props` parameter available to use in this component, which means we need to do a slight refactor in this component for it to work properly:
 
 ```jsx
 // src/components/FounderListItem/FounderListItem.jsx
 
-const FounderListItem = ({founder}) => {
+const FounderListItem = ({ founder }) => {
   return (
     <li>
       <h3>Hello, I'm {founder.name} the {founder.title}!</h3>

@@ -49,7 +49,7 @@ const FounderListItem = (props) => {
 We could even destructure these items from props directly:
 
 ```jsx
-const FounderListItem = ({name, title, credential}) => {
+const FounderListItem = ({ name, title, credential }) => {
   return (
     <li>
       <h3>Hello, I'm {name} the {title}!</h3>

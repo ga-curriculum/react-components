@@ -47,6 +47,8 @@ Now, let's modify the `Navbar` component to accept the links `prop` and use it t
 ```jsx
 // src/Navbar.jsx
 
+import NavbarLink from '../NavbarLink/NavbarLink.jsx';
+
 const Navbar = ({ links }) => {
   return (
     <nav id="top-navbar">
@@ -66,8 +68,8 @@ Was it necessary to refactor the static navbar list items into their components?
 
 If repeated elements are based on dynamic, user-generated data, they should be separate components that accept `props`. If those elements are just static links, as in the `Navbar` example, they likely don't need separate components.
 
-However, professional developer teams create component libraries that do precisely this: every button in the app is a separate component with its own `props`, styling, and functionality.
+However, professional developer teams create component libraries that do precisely this: like in our app every link in the nav bar is now component with its own props, styling, and functionality. This could be useful if we wanted to show an icon next to these links or if we wanted to color one of them based on which one we are currently viewing.
 
-This keeps things consistent no matter how large the app becomes. Suppose every developer uses the team's custom `<ResponsiveButton>` component instead of generic `<button>` elements. In that case, the team can benefit from modularized React components.
+This keeps things consistent no matter how large the app becomes. Suppose every developer uses the team's custom `<NavbarLink>` component instead of generic `<a>` elements. In that case, the team can benefit from modularized React components.
 
 When joining a React dev team, you should expect to inherit a custom component library that the team uses throughout the application.

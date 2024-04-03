@@ -80,7 +80,7 @@ mkdir src/components/Navbar
 Finally, we'll create a `Navbar.jsx` file for this component inside the new `Navbar` directory.
 
 ```bash
-touch src/components/NavBar/Navbar.jsx
+touch src/components/Navbar/Navbar.jsx
 ```
 
 > ♻️ Repeatable pattern: when adding a new component to a project, we'll follow a pattern similar to what we've just done. We'll start with a directory matching the component's name inside of the `components` directory. After we've created that we'll make a `.jsx` file with an identical name.
@@ -118,10 +118,10 @@ const Navbar = () => {
 
 The final step is adding the `export` statement. This enables the component to be used in other parts of the application through the `import` statement.
 
-To complete our `Navbar.jsx` file, add the following code at the bottom:
+To complete our `Navbar.jsx` file, ensure you're exporting the component at the end of the file:
 
 ```jsx
-// src/Navbar.jsx
+// src/components/Navbar/Navbar.jsx
 
 export default Navbar;
 ```
@@ -133,7 +133,7 @@ Now that we've created a Navbar component, let's import it into our `App.jsx` fi
 ```jsx
 // src/App.jsx
 
-import Navbar from "./components/Navbar/Navbar.jsx";
+import Navbar from './components/Navbar/Navbar.jsx';
 ```
 
 To include the `Navbar` component in our JSX, we can insert it into the markup like a standard HTML element `<Navbar></Navbar>` or simply `<NavBar />`.
@@ -172,9 +172,11 @@ Next, add an import statement to the top of your `Navbar.jsx` file that imports 
 ```jsx
 // src/components/Navbar/Navbar.jsx
 
-import "./Navbar.css";
+import './Navbar.css';
 ```
 
-You might hope that this setup means your styles are locked down to just the Navbar component. That would be helpful, but the CSS here is still global. That means styles in `Navbar.css` could affect other parts of your app where similar CSS selectors are used.
+You might hope this setup means your styles are locked down to just the Navbar component. That would be helpful, but the CSS here is still global. That means styles in `Navbar.css` could affect other parts of your app where similar CSS selectors are used.
+
+This doesn't mean that per-component CSS like this isn't worthwhile. Bundling our code in this way for organization purposes is still a plus and keeps us from writing all our CSS in a single file for our whole app. It also builds good practice for when we eventually contain the CSS in a file to a single component.
 
 Ensure your CSS rules are targeted specifically at the Navbar to ensure there is no overlap with any other element. For example, use an `id` or `class` unique to the Navbar. This is a good practice to ensure your styles don't start affecting other elements unexpectedly.

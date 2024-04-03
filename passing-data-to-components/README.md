@@ -72,8 +72,8 @@ Import `FounderListItem` at the top of `App.jsx` and replace the first list item
 ```jsx
 // src/App.jsx
 
-import Navbar from "./components/Navbar/Navbar.jsx";
-import FounderListItem from "./components/FounderListItem/FounderListItem.jsx";
+import Navbar from './components/Navbar/Navbar.jsx';
+import FounderListItem from './components/FounderListItem/FounderListItem.jsx';
 
 import './App.css';
 
@@ -120,18 +120,18 @@ Props are passed to child components by adding them as named attributes to the c
 ```jsx
 // src/App.jsx
 
-<h2>Our Founders</h2>
-<ul>
-  <FounderListItem name="Elizabeth Holmes" />
-  <li>
-    <h3>Sam Bankman-Fried: CFO</h3>
-    <p>CPA from TotallyReal State</p>
-  </li>
-  <li>
-    <h3>Matt Damon: CMO</h3>
-    <p>Was in that Movie You saw</p>
-  </li>
-</ul>
+      <h2>Our Founders</h2>
+      <ul>
+        <FounderListItem name="Elizabeth Holmes" />
+        <li>
+          <h3>Sam Bankman-Fried: CFO</h3>
+          <p>CPA from TotallyReal State</p>
+        </li>
+        <li>
+          <h3>Matt Damon: CMO</h3>
+          <p>Was in that Movie You saw</p>
+        </li>
+      </ul>
 ```
 
 > 🧠 Here, we pass `name` as a prop and give it the string value `"Elizabeth Holmes"`.
@@ -143,6 +143,8 @@ Props are passed to child components by adding them as named attributes to the c
 React components are just functions, so once a prop has been passed to a component in JSX, it's like passing an argument that can be used inside the component.
 
 ```jsx
+// src/components/FounderListItem/FounderListItem.jsx
+
 const FounderListItem = (props) => {
   return (
     <li>
