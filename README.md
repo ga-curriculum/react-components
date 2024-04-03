@@ -16,10 +16,10 @@ This lesson explores React's component-based approach to constructing web applic
 | [Setup](./setup/README.md)                                                         | -- | -- | Setting up the development environment.                    |
 | [Concepts](./concepts/README.md)                                                   | -- | -- | Describe modularizing components.                          |
 | [Structuring Components in React](./structuring-components-in-react/README.md)     | -- | -- | Identifying component structure in a web page.             |
-| [Nesting Components](./nesting-components/README.md)                               | -- | -- | Implement multiple components in multiple files.           |
-| [Passing Data to Components](./passing-data-to-components/README.md)               | -- | -- | Use props to pass data to react components.                |
+| [Building and Using Components](./building-and-using-components/README.md)                               | -- | -- | Implement multiple components in multiple files.           |
+| [Passing Data with Props](./passing-data-with-props/README.md)                     | -- | -- | Use props to pass data to react components.                |
 | [Reusing Components](./reusing-components/README.md)                               | -- | -- | Reuse React components by making them accept generic data. |
-| [Passing Mapped Data to Components](./passing-mapped-data-to-components/README.md) | -- | -- | Use props to pass more complex data to react components.   |
+| [Mapping Components with Data](./mapping-components-with-data/README.md) | -- | -- | Use props to pass more complex data to react components using the `.map()` method.   |
 | [Destructuring Props](./destructuring-props/README.md)                             | -- | -- | Destructure props passed to components.                    |
 | **Total content**                                                                  | -- | -- |                                                            |
 
@@ -28,7 +28,7 @@ This lesson explores React's component-based approach to constructing web applic
 | Lesson | Video Time | Video | Skills |
 | ------ | :--------: | :---: | ------ |
 | [Spreading to Props](./spreading-to-props/README.md)               | -- | -- | Using spread syntax to pass props.                                                 |
-| [Everything is a Component](./everything-is-a-component/README.md) | -- | -- | Creating more granular components and passing props from parents to grandchildren. |
+| [Nested Components](./nested-components/README.md) | -- | -- | Creating more granular components and passing props from parents to grandchildren. |
 | **Total Level Up content**                                         | -- | -- |                                                                                    |
 
 ## References

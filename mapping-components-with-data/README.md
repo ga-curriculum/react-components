@@ -1,4 +1,4 @@
-# ![React Components - Passing Mapped Data to Components](./assets/hero.png)
+# ![React Components - Mapping Components with Data](./assets/hero.png)
 
 tktk Hunter, could you rebuild this hero with the new name? Also not the biggest fan of this name, if you have a better idea let's chat.
 

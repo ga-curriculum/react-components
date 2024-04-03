@@ -21,7 +21,7 @@ import './App.css';
 
 const App = () => {
   return (
-    <>
+    <> 
       <nav id="top-navbar">
         <a href="/">Home</a>
         <a href="/about-us">About Us</a>
