@@ -1,12 +1,12 @@
 # ![React Components - Spreading to Props](./assets/hero.png)
 
-tktk Hunter, could you update this hero?
+tktk Hunter, could you add a hero?
 
 **Learning objective:** By the end of this lesson, students will be able to use JavaScript's spread syntax to pass props
 
 ## JavaScript spread syntax
 
-Earlier we refactored `FounderListItem` to accept the `founder` object on `props`. This meant we could only access its the properties of `founder` on `founder.something`. In some cases this isn't ideal. When this is the case, JavaScript has a tool to simplify passing multiple `props` as a bundle - the spread operator  `...`.
+Earlier, we refactored `FounderListItem` to accept the `founder` object on `props`. This meant we could only access the properties of `founder` on `founder.something`. In some cases, this isn't ideal. When this is the case, JavaScript has a tool to simplify passing multiple `props` as a bundle - the spread operator  `...`.
 
 The spread operator `...` in JavaScript is a convenient way to pass ***all the properties*** of an object as `props` to a React component.
 
@@ -33,7 +33,7 @@ const App = () => {
 
 In the `App` component, when you use the spread operator for `{...founder}`, what you're doing is essentially taking each key-value pair from the `founder` object and passing them as separate props to the `FounderListItem` component.
 
-When used with a component like `FounderListItem`, it allows us to maintain a clean and concise syntax while still being able to individually access each property within the component.
+When used with a component like `FounderListItem`, it allows us to maintain a clean and concise syntax while still being able to access each property within the component individually.
 
 ```jsx
 const FounderListItem = (props) => {
@@ -59,4 +59,4 @@ const FounderListItem = ({name, title, credential}) => {
 };
 ```
 
-In the `FounderListItem` component, you are able to define concise parameters like `{name, title, credential}`. These directly correspond to the keys in the founder object. By using object destructuring, you're able to extract each of these properties from the `props` object.
+In the `FounderListItem` component, you can define concise parameters like `{name, title, credential}`. These directly correspond to the keys in the founder object. By using object destructuring, you can extract each of these properties from the `props` object.

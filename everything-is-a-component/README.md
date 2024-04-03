@@ -4,9 +4,9 @@
 
 ## Breaking the `App` into smaller components
 
-The most modular, reusable, parts of our web page have now been turned into components. Could we do more?
+Our web page's most modular, reusable parts have now been turned into components. Could we do more?
 
-In this section, we'll explore how to refine our React components even further. We'll take our `Navbar` component and break it down into smaller components - specifically, individual `NavbarLink` components. This exercise will help us understand how to pass data through multiple levels of components in React.
+Let's explore how to refine our React components even further. We'll break our `Navbar` component into smaller components - specifically, individual `NavbarLink` components. This exercise will help us understand how to pass data through multiple levels of components in React.
 
 ## Refactor the `Navbar` list
 
@@ -34,9 +34,9 @@ const App = () => {
 };
 ```
 
-## 🎓 You Do : Create a `NavbarLink` component
+## 🎓 You Do
 
-Let's create a new component, `NavbarLink`, which will be responsible for rendering a single navigation link. This component will receive the props `href` and `text` from the `Navbar` component.
+Create a new component, `NavbarLink`, which will be responsible for rendering a single navigation link. This component will receive the props `href` and `text` from the `Navbar` component.
 
 ## Render the `NavbarLink` components
 
@@ -56,15 +56,15 @@ const Navbar = ({ links }) => {
 };
 ```
 
-Great Work! We've successfully passed our link data from the `App` component to the `Navbar` component, and then to each `NavbarLink` component. This demonstrates a two-level `prop` passing pattern in React, where data flows from a parent component to a child, and then to a grandchild component.
+Great Work! We've successfully passed our link data from the `App` component to the `Navbar` component and then to each `NavbarLink` component. This demonstrates a two-level `prop` passing pattern in React, where data flows from a parent component to a child and then to a grandchild component.
 
 ## How many is too many?
 
-Was it necessary to refactor the static navbar list items into their components? Probably not! Just because you can make something into its own component doesn't mean you need to, or even should.
+Was it necessary to refactor the static navbar list items into their components? Probably not! Just because you can make something into its own component doesn't mean you need to or should.
 
 If repeated elements are based on dynamic, user-generated data, they should be separate components that accept `props`. If those elements are just static links, as in the `Navbar` example, they likely don't need separate components.
 
-However, you'll find professional developer teams creating component libraries that do precisely this sort of thing: every button in the app is a separate component that carries its own `props`, styling, and functionality with it.
+However, professional developer teams create component libraries that do precisely this: every button in the app is a separate component with its own `props`, styling, and functionality.
 
 This keeps things consistent no matter how large the app becomes. Suppose every developer uses the team's custom `<ResponsiveButton>` component instead of generic `<button>` elements. In that case, the team can benefit from modularized React components.
 

@@ -1,12 +1,12 @@
 # ![React Components - Passing Mapped Data to Components](./assets/hero.png)
 
-tktk Hunter, could you rebuild this hero with the new name?
+tktk Hunter, could you rebuild this hero with the new name? Also not the biggest fan of this name, if you have a better idea let's chat.
 
-**Learning objective:** By the end of this lesson, learners will be able to understand and implement the concept of passing data between components in React using `props` inside of a `map()`.
+**Learning objective:** By the end of this lesson, students will be able to pass data to a component inside of a `map()` array method.
 
 ## Mapping data to components
 
-While our approach so far has demonstrated that we can reuse React components, we're having to do a lot of manual work to do so. What if we had an array of objects (an incredibly common format for lists of data coming from a database) and we wanted to pass each one to a new instance of the `FounderListItem` component? This would not only make our component even more useful, but also make less work for us.
+While our approach so far has demonstrated that we can reuse React components, we have to do a lot of manual work. What if we had an array of objects (an prevalent format for lists of data coming from a database), and we wanted to pass each one to a new instance of the `FounderListItem` component? This would not only make our component even more useful but also make less work for us.
 
 Bring the below `founders` array into your `app.js` file.
 
@@ -33,7 +33,7 @@ const founders = [
 ];
 ```
 
-With the array of data in place, we can use the `map()` array method to transform the array of data into a new array of JSX elements. Note we've added a hardcoded `id` to each object to make creating a key for each JSX element easier.
+With the array of data in place, we can use the `map()` array method to transform the it into a new array of JSX elements. Note that we've added a hardcoded `id` to each object to make creating a key for each JSX element easier.
 
 Let's refactor `App.jsx` to include a mapped list of `FounderListItem` components:
 
@@ -64,13 +64,13 @@ const App = () => {
 };
 ```
 
-> ⚠️ When we use the `.map()` method in React to create a list of components, like our `FounderListItem` components, it's essential to give each one a unique `key` prop. This `key` helps React keep track of each item in the list. Specifically, it's used for identifying which items have changed, been added, or been removed. This is crucial, especially when dealing with dynamic lists that might get updated or reordered.
+> ⚠️ When we use the `.map()` method in React to create a list of components, like our `FounderListItem` components, giving each one a unique `key` prop is essential. This `key` helps React track each item in the list. Specifically, it's used to identify which items have changed, been added, or been removed. This is crucial, especially when dealing with dynamic lists that might get updated or reordered.
 
 We should now see our founders rendered to the page dynamically from our array. Great work!
 
 ## Consolidating our `props`
 
-Currently, we are passing two of the properites down individually from each `founder` object in `App` as `props` to each `FounderListItem` component. This is a manageable number, but imagine if there were 20 or more, how does this scale?
+Currently, we are passing two of the properties down individually from each `founder` object in `App` as `props` to each `FounderListItem` component. This is a manageable number, but imagine if there were 20 or more. How would this scale?
 
 Our list of `props` passed to `FounderListItem` would soon become unmanageably large in our JSX.
 
@@ -101,7 +101,7 @@ Let's refactor our `.map()` function for a more scalable `prop` structure:
 
 tktk Hunter, can you add a CHD here using this new structure?
 
-This requires one more change to the `FounderListItem` component because it is no longer receiving `name` or `title` props - instead both of those properties are on the `founder` object being passes as a prop.
+This requires one more change to the `FounderListItem` component because it is no longer receiving `name` or `title` props - instead, both of those properties are on the `founder` object being passed as a prop.
 
 ```jsx
 // src/components/FounderListItem/FounderListItem.jsx
@@ -121,4 +121,4 @@ Much better!
 
 ### 🎓 You Do
 
-Add a `<p>` element inside the `<li>` element after the `<h3>`. Print the credential of each founder inside of it.
+Add a `<p>` element inside the `<li>` element after the `<h3>`. Print the credentials of each founder inside of it.

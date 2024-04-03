@@ -1,5 +1,7 @@
 # ![React Components - Structuring Components in React](./assets/hero.png)
 
+tktk Hunter, /giphy I need a hero
+
 **Learning objective:** By the end of this lesson, students will be able to identify potential components within a web page's layout and understand how to structure these components effectively in a React application.
 
 ## Creating a component structure

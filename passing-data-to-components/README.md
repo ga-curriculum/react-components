@@ -2,7 +2,7 @@
 
 tktk Hunter, can you rebuild this hero to match the new title (Passing Data to Components)?
 
-**Learning objective:** By the end of this lesson, learners will be able to understand and implement the concept of passing data to components in React using props.
+**Learning objective:** By the end of this lesson, students will be able to understand and implement the concept of passing data to components in React using props.
 
 ## Founders list
 

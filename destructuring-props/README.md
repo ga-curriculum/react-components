@@ -2,11 +2,11 @@
 
 tktk Hunter, could you update this hero?
 
-**Learning objective:** By the end of this lesson, learners will be able to understand how and why to destructure props in React.
+**Learning objective:** By the end of this lesson, students will be able to understand how and why to destructure props in React.
 
 ## Destructuring
 
-The work we've done so far is great, but you'll notice that whenever we want to access a property on the `founder` object we have to navigate through `props` over and over to get the data we need. There's nothing necessarily ***wrong*** with this, but you can imagine how this might become tedious, especially if we had even more objects nested inside of the `founder` object.
+Our work so far is great, but you'll notice that whenever we want to access a property on the `founder` object, we have to navigate through `props` repeatedly to get the data we need. Nothing is necessarily ***wrong*** with this, but you can imagine how this might become tedious, especially if we had even more objects nested inside  the `founder` object.
 
 This is where [object destructuring](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#object_destructuring) comes into play.
 
@@ -50,11 +50,11 @@ const FounderListItem = ({founder}) => {
 export default FounderListItem;
 ```
 
-All better! Again, destructring isn't something you're required to do, but it's a common pattern used in documentation
+All better! Again, destructuring isn't something you're required to do, but it's a common pattern used in documentation and other online resources.
 
 ## Retaining access to `props`
 
-It's not uncommon to want to retain access to everything passed on `props`, but still destructure some things from it. The below syntax can accomplish this:
+It's not uncommon to want to retain access to everything passed on `props` but still destructure some things from it. The below syntax can accomplish this:
 
 ```jsx
 // src/components/FounderListItem/FounderListItem.jsx
@@ -72,6 +72,6 @@ const FounderListItem = (props) => {
 export default FounderListItem;
 ```
 
-`props` is now available to use throughout the `FounderListItem` component, but `founder` has been destructured as well so that it's still easy to access its properties.
+`props` can now be used throughout the `FounderListItem` component, and `founder` has also been destructured so that it's still easy to access its properties.
 
-> 🧠 Destructuring isn't just for React applications! This syntax is built into JavaScript, and you can use it in any modern JavaScript app.
+> 🧠 Destructuring isn't just for React applications! This syntax is built into JavaScript; you can use it in any modern JavaScript app.

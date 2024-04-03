@@ -2,7 +2,7 @@
 
 ## About
 
-This lesson explores React's component-based approach for constructing web applications. Unlike traditional methods where HTML, CSS, and JavaScript reside in separate files, React integrates these technologies within components. Students will learn to create components, nest them inside one another, and pass data from parent to child components using `props`.
+This lesson explores React's component-based approach to constructing web applications. Unlike traditional methods where HTML, CSS, and JavaScript reside in separate files, React integrates these technologies within components. Students will learn to create components, nest them inside one another, and pass data from parent to child components using `props`.
 
 ## Prerequisites
 
@@ -13,21 +13,27 @@ This lesson explores React's component-based approach for constructing web appli
 
 | Lesson | Video Time | Video | Skills |
 | ------ | :--------: | :---: | ------ |
-| [Setup](./setup/README.md)                                                         | -- | -- | Setting up the development environment.          |
-| [Concepts](./concepts/README.md)                                                   | -- | -- | Describe modularizing components.                |
-| [Structuring Components in React](./structuring-components-in-react/README.md)     | -- | -- | Identifying component structure in a web page.   |
-| [Nesting Components](./nesting-components/README.md)                               | -- | -- | Implement multiple components in multiple files. |
-| [Passing Data to Components](./passing-data-to-components/README.md)               | -- | -- | Use props to pass data to react components.    |
-| [Reusing Components](./reusing-components/README.md)                               | -- | -- | Reuse React components by making them accept generic data.    |
-| [Passing Mapped Data to Components](./passing-mapped-data-to-components/README.md) | -- | -- | Use props to pass more complex data to react components.    |
-| [Destructuring Props](./destructuring-props/README.md)                             | -- | -- | Destructure props passed to components.    |
+| [Setup](./setup/README.md)                                                         | -- | -- | Setting up the development environment.                    |
+| [Concepts](./concepts/README.md)                                                   | -- | -- | Describe modularizing components.                          |
+| [Structuring Components in React](./structuring-components-in-react/README.md)     | -- | -- | Identifying component structure in a web page.             |
+| [Nesting Components](./nesting-components/README.md)                               | -- | -- | Implement multiple components in multiple files.           |
+| [Passing Data to Components](./passing-data-to-components/README.md)               | -- | -- | Use props to pass data to react components.                |
+| [Reusing Components](./reusing-components/README.md)                               | -- | -- | Reuse React components by making them accept generic data. |
+| [Passing Mapped Data to Components](./passing-mapped-data-to-components/README.md) | -- | -- | Use props to pass more complex data to react components.   |
+| [Destructuring Props](./destructuring-props/README.md)                             | -- | -- | Destructure props passed to components.                    |
+| **Total content**                                                                  | -- | -- |                                                            |
 
 ## Level Up content
 
 | Lesson | Video Time | Video | Skills |
 | ------ | :--------: | :---: | ------ |
-| [Spreading to Props](./spreading-to-props/README.md)               | -- | -- | Using spread syntax to pass props.  |
-| [Everything is a Component](./everything-is-a-component/README.md) | -- | -- | Creating more granular components and passing props from parents to grandchildren.  |
+| [Spreading to Props](./spreading-to-props/README.md)               | -- | -- | Using spread syntax to pass props.                                                 |
+| [Everything is a Component](./everything-is-a-component/README.md) | -- | -- | Creating more granular components and passing props from parents to grandchildren. |
+| **Total Level Up content**                                         | -- | -- |                                                                                    |
+
+## References
+
+📖 [Reference Materials](./references/README.md)
 
 ## Internal resources
 
