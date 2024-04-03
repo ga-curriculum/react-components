@@ -159,7 +159,7 @@ const App = () => {
 };
 ```
 
-Nice! Check back in the browser, and you should see the site restored to its original look, only now with components working together to make it happen.
+Nice! Check back in the browser, and you should see the site restored to its original look, only now with components working together to make it happen. And with that you've just built your first user-defined component!
 
 ## Component-specific CSS
 
