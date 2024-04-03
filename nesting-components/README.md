@@ -1,8 +1,10 @@
-# ![React Components - Nesting Components](./assets/hero.png)
+# ![React Components - Building and Using Components](./assets/hero.png)
+
+tktk Hunter, need an updated hero here
 
 **Learning objective:** By the end of this lesson, learners will be able to understand and implement the concept of component nesting in React.
 
-## Nesting our first component
+## Building our first component
 
 Now that we have explored our sample markup let's move the first half into our React app and start creating some components. We'll start with the nav bar. It's a common UI element found on almost every web page, perfectly illustrating the concept of a reusable and distinct component.
 

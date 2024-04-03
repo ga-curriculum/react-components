@@ -1,6 +1,6 @@
-# ![React Components - Passing Data to Components](./assets/hero.png)
+# ![React Components - Passing Data with Props](./assets/hero.png)
 
-tktk Hunter, can you rebuild this hero to match the new title (Passing Data to Components)?
+tktk Hunter, can you rebuild this hero to match the new title (Passing Data with Props)?
 
 **Learning objective:** By the end of this lesson, students will be able to understand and implement the concept of passing data to components in React using props.
 
