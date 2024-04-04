@@ -2,7 +2,9 @@
 
 ## About
 
-This lesson explores React's component-based approach for constructing web applications. Unlike traditional methods where HTML, CSS, and JavaScript reside in separate files, React integrates these technologies within components. Students will learn to create components, nest them inside one another, and pass data from parent to child components using `props`.
+This lesson explores React's component-based approach to constructing web applications. Unlike traditional methods where HTML, CSS, and JavaScript reside in separate files, React integrates these technologies within components.
+
+Students will learn to create components, nest them inside one another, and pass data from parent compontents to its children components using props.
 
 ## Prerequisites
 

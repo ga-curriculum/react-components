@@ -50,7 +50,7 @@ rules: {
 
 The first addition prevents warnings if you don't declare types for your props (which we don't), and the second prevents warnings if you use contractions within JSX.
 
-### Clear `App.jsx`
+### Update `App.jsx`
 
 Open the `App.jsx` file in the `src` directory and replace the contents of it with the following:
 
