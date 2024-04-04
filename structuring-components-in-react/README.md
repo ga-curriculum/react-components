@@ -83,6 +83,6 @@ Let's look at this same site markup organized as a component hierarchy.
 
 tktk Hunter, need a component outline wireframe here something like this... A component heirarchy diagram would work well here too in addition to this.
 
-The `App` component serves as the parent or ***root*** of our component hierarchy. It contains two distinct child components: `Nav` and `FounderListItem`. Each of these child components should be represented by its own dedicated file.
+The `App` component serves as the parent or ***root*** of our component hierarchy. It contains two distinct child components: `Navbar` and `FounderListItem`. Each of these child components should be represented by its own dedicated file.
 
 This separation allows for more organized code management, with each component having individual JSX and CSS files.
