@@ -1,7 +1,5 @@
 # ![React Components - Nested Components](./assets/hero.png)
 
-tktk Hunter, this needs a hero
-
 **Learning objective:** By the end of this lesson, learners will be able to break down a React component into smaller parts and understand the concept of passing `props` from a parent component to a grandchild component.
 
 ## Breaking the `App` into smaller components

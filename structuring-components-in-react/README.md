@@ -1,7 +1,5 @@
 # ![React Components - Structuring Components in React](./assets/hero.png)
 
-tktk Hunter, /giphy I need a hero
-
 **Learning objective:** By the end of this lesson, students will be able to identify potential components within a web page's layout and understand how to structure these components effectively in a React application.
 
 ## Creating a component structure
@@ -77,11 +75,9 @@ Component structure won't always follow markup structure exactly, but it can giv
 
 ## Creating a component hierarchy
 
-Let's look at this same site markup organized as a component hierarchy.
+Let's see how this markup might be translated into a component hierarchy diagram.
 
-![](./assets/Screenshot%202024-03-26%20at%203.02.16 PM.png)
-
-tktk Hunter, need a component outline wireframe here something like this... A component heirarchy diagram would work well here too in addition to this.
+![Component hierarchy](./assets/two.png)
 
 The `App` component serves as the parent or ***root*** of our component hierarchy. It contains two distinct child components: `Navbar` and `FounderListItem`. Each of these child components should be represented by its own dedicated file.
 

@@ -1,7 +1,5 @@
 # ![React Components - Destructring Props](./assets/hero.png)
 
-tktk Hunter, could you update this hero?
-
 **Learning objective:** By the end of this lesson, students will be able to understand how and why to destructure props in React.
 
 ## Destructuring

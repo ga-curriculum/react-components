@@ -14,11 +14,15 @@ To understand this, let's contrast how traditional HTML, CSS, and JavaScript app
 
 Traditional web applications typically separate HTML, CSS, and JavaScript into distinct files – HTML for structure, CSS for styling, and JavaScript for interactivity. These web apps tend to have a more monolithic structure, where large chunks of code are written in just a few files.
 
-[tktk hunter, something here to visually illustrate this, maybe borrowed from the intro to react lesson]()
+![Traditional web apps](./assets/traditional-web-app.png)
 
 In React's more modular approach, these technologies are often combined. In a React app, the UI is broken down into components, each defined in a separate JSX file. JSX allows combining HTML structure, CSS styles, and JavaScript logic in a single file for each component.
 
+![JSX](./assets/jsx.png)
+
 Each React component encapsulates a specific element or a closely related group of elements, each serving a singular purpose - like a button, form, or navigation bar.
+
+![JSX Components](./assets/jsx-components.png)
 
 ## Learning to think in components
 
@@ -34,9 +38,9 @@ Because components are isolated, they can be developed and tested independently,
 
 ## Your application is a tree
 
-In the tree structure of a React app, components form a hierarchy. You have parent components and child components. This hierarchy is important because it defines the flow of data and the relationship between different parts of your application. For example, a `Navbar` component might have child components like `NavItem` or `DropdownMenu`.
+![Component hierarchy](./assets/chd.png)
 
-tktk Hunter, maybe add an example CHD here? Not incredibly complex, but something from an earlier app we build?
+In the tree structure of a React app, components form a hierarchy. You have parent components and child components. This hierarchy is important because it defines the flow of data and the relationship between different parts of your application. For example, a `Navbar` component might have child components like `NavItem` or `DropdownMenu`.
 
 ## Components for collaboration
 

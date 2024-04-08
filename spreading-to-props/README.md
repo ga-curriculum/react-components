@@ -1,7 +1,5 @@
 # ![React Components - Spreading to Props](./assets/hero.png)
 
-tktk Hunter, could you add a hero?
-
 **Learning objective:** By the end of this lesson, students will be able to use JavaScript's spread syntax to pass props
 
 ## JavaScript spread syntax

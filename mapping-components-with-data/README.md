@@ -1,10 +1,10 @@
 # ![React Components - Mapping Components with Data](./assets/hero.png)
 
-tktk Hunter, could you rebuild this hero with the new name? Also not the biggest fan of this name, if you have a better idea let's chat.
-
 **Learning objective:** By the end of this lesson, students will be able to pass data to a component inside of a `map()` array method.
 
 ## Mapping data to components
+
+![Mapping](./assets/mapping.png)
 
 While our approach so far has demonstrated that we can reuse React components, we have to do a lot of manual work. What if we had an array of objects (an prevalent format for lists of data coming from a database), and we wanted to pass each one to a new instance of the `FounderListItem` component? This would not only make our component even more useful but also make less work for us.
 
@@ -127,8 +127,6 @@ Let's refactor our `.map()` function for a more scalable `prop` structure:
     </>
   );
 ```
-
-tktk Hunter, can you add a CHD here using this new structure?
 
 This requires one more change to the `FounderListItem` component because it is no longer receiving `name` or `title` props - instead, both of those properties are on the `founder` object being passed as a prop.
 

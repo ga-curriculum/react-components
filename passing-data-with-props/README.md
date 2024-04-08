@@ -1,7 +1,5 @@
 # ![React Components - Passing Data with Props](./assets/hero.png)
 
-tktk Hunter, can you rebuild this hero to match the new title (Passing Data with Props)?
-
 **Learning objective:** By the end of this lesson, students will be able to understand and implement the concept of passing data to components in React using props.
 
 ## Founders list
@@ -103,6 +101,8 @@ const App = () => {
 };
 ```
 
+![Component tree](./assets/two.png)
+
 You should see the **Hello, I'm a super impressive Founder!** text on your page now. Let's make this component more interesting by passing some data to it!
 
 ## Enter props
@@ -134,6 +134,8 @@ Props are passed to child components by adding them as named attributes to the c
       </ul>
 ```
 
+![Component tree](./assets/three.png)
+
 > 🧠 Here, we pass `name` as a prop and give it the string value `"Elizabeth Holmes"`.
 >
 > Props are not limited to strings. They can be any primitive data and even take the form of objects or arrays.
@@ -154,11 +156,9 @@ const FounderListItem = (props) => {
 };
 ```
 
+![Component tree](./assets/four.png)
+
 `props` are ***immutable***. A child component cannot change what it receives from its parent, nor can it alter the `props` of its parent or sibling components. `props` are like read-only instructions sent down from parent to child, ensuring a stable and predictable flow of data.
-
-![Props](./assets/props-b.png)
-
-tktk Hunter, can you rebuild this asset to match the data we're working with here? Also a little bit of copy explaining this asset would be awesome to add here when you've done that.
 
 > 📚 Props (shorthand for properties) allow data to be passed from a parent component to a child component. They allow components to be dynamic and reusable. They are immutable, so they can only be read - they cannot be modified.
 

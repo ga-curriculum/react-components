@@ -1,7 +1,5 @@
 # ![React Components - Building and Using Components](./assets/hero.png)
 
-tktk Hunter, need an updated hero here
-
 **Learning objective:** By the end of this lesson, learners will be able to understand and implement the concept of component nesting in React.
 
 ## Building our first component
@@ -41,6 +39,8 @@ export default App;
 ```
 
 Here, we have nested a `<nav>` JSX element and some fake navbar items.
+
+![Component tree](./assets/one.png)
 
 ### Clear default CSS
 

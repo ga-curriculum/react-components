@@ -1,7 +1,5 @@
 # ![React Components - Reusing Components](./assets/hero.png)
 
-tktk Hunter, could you rebuild this hero with the new name?
-
 **Learning objective:** By the end of this lesson, learners will be able to understand the basic concepts of component reuse in React.
 
 ## Reusability in React
@@ -22,7 +20,7 @@ Imagine if we want to pass information about each founder from our main `App` co
 
 So, in our case, each `FounderListItem` would receive its own set of props (like `name` and `title`) from the `App` component. Each instance of the `FounderListItem` component can only use the props it received to render the founder's details as specified.
 
-![tktk Hunter another graphic here, showing props being passed down a CHD]()
+![Props received](./assets/props-received.png)
 
 Replace the last two list items in the JSX with the existing `FounderListItem` component.
 
