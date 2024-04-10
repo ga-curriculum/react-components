@@ -29,7 +29,7 @@ const founders = [
   {
     name: "Matt Damon",
     title: "CMO",
-    credential: "Was in that Movie You saw",
+    credential: "Was in that movie you saw",
     id: 3,
   },
 ];
@@ -44,21 +44,24 @@ Let's refactor `App.jsx` to include a mapped list of `FounderListItem` component
 
 const App = () => {
 
-    const founders = [
+  const founders = [
     {
-      name: 'Elizabeth Holmes',
-      title: 'CEO',
-      credential: 'MBA from SuperLegit University',
+      name: "Elizabeth Holmes",
+      title: "CEO",
+      credential: "MBA from SuperLegit University",
+      id: 1,
     },
     {
-      name: 'Sam Bankman-Fried',
-      title: 'CFO',
-      credential: 'CPA from TotallyReal State',
+      name: "Sam Bankman-Fried",
+      title: "CFO",
+      credential: "CPA from TotallyReal State",
+      id: 2,
     },
     {
-      name: 'Matt Damon',
-      title: 'CMO',
-      credential: 'Was in that Movie You saw',
+      name: "Matt Damon",
+      title: "CMO",
+      credential: "Was in that movie you saw",
+      id: 3,
     },
   ];
 
