@@ -13,25 +13,25 @@ Students will learn to create components, nest them inside one another, and pass
 
 ## Content
 
-| Lesson                                                                         | Video Time | Video | Skills                                                                             |
-| ------------------------------------------------------------------------------ | :--------: | :---: | ---------------------------------------------------------------------------------- |
-| [Setup](./setup/README.md)                                                     |     --     |  --   | Setting up the development environment.                                            |
-| [Concepts](./concepts/README.md)                                               |     --     |  --   | Describe modularizing components.                                                  |
-| [Structuring Components in React](./structuring-components-in-react/README.md) |     --     |  --   | Identifying component structure in a web page.                                     |
-| [Building and Using Components](./building-and-using-components/README.md)     |     --     |  --   | Implement multiple components in multiple files.                                   |
-| [Passing Data with Props](./passing-data-with-props/README.md)                 |     --     |  --   | Use props to pass data to react components.                                        |
-| [Reusing Components](./reusing-components/README.md)                           |     --     |  --   | Reuse React components by making them accept generic data.                         |
-| [Mapping Components with Data](./mapping-components-with-data/README.md)       |     --     |  --   | Use props to pass more complex data to react components using the `.map()` method. |
-| [Destructuring Props](./destructuring-props/README.md)                         |     --     |  --   | Destructure props passed to components.                                            |
-| **Total content**                                                              |     --     |  --   |                                                                                    |
+| Lesson | Video Time | Video | Skills |
+| ------ | :--------: | :---: | ------ |
+| [Setup](./setup/README.md)                                                     |  3 min | [link](https://generalassembly.wistia.com/medias/2kmay76sx9) | Setting up the development environment.                                            |
+| [Concepts](./concepts/README.md)                                               |  4 min | [link](https://generalassembly.wistia.com/medias/2y0hevacnc) | Describe modularizing components.                                                  |
+| [Structuring Components in React](./structuring-components-in-react/README.md) |  4 min | [link](https://generalassembly.wistia.com/medias/e0ttdnbckm) | Identifying component structure in a web page.                                     |
+| [Building and Using Components](./building-and-using-components/README.md)     |  9 min | [link](https://generalassembly.wistia.com/medias/oiwqxk85t9) | Implement multiple components in multiple files.                                   |
+| [Passing Data with Props](./passing-data-with-props/README.md)                 |  8 min | [link](https://generalassembly.wistia.com/medias/lf1w39o3uv) | Use props to pass data to react components.                                        |
+| [Reusing Components](./reusing-components/README.md)                           |  4 min | [link](https://generalassembly.wistia.com/medias/ita2jifwqc) | Reuse React components by making them accept generic data.                         |
+| [Mapping Components with Data](./mapping-components-with-data/README.md)       |  7 min | [link](https://generalassembly.wistia.com/medias/exp406judg) | Use props to pass more complex data to react components using the `.map()` method. |
+| [Destructuring Props](./destructuring-props/README.md)                         |  3 min | [link](https://generalassembly.wistia.com/medias/0ueoi6t98r) | Destructure props passed to components.                                            |
+| **Total content**                                                              | 42 min |                                                              |                                                                                    |
 
 ## Level Up content
 
-| Lesson                                               | Video Time | Video | Skills                                                                             |
-| ---------------------------------------------------- | :--------: | :---: | ---------------------------------------------------------------------------------- |
-| [Spreading to Props](./spreading-to-props/README.md) |     --     |  --   | Using spread syntax to pass props.                                                 |
-| [Nested Components](./nested-components/README.md)   |     --     |  --   | Creating more granular components and passing props from parents to grandchildren. |
-| **Total Level Up content**                           |     --     |  --   |                                                                                    |
+| Lesson | Video Time | Video | Skills |
+| ------ | :--------: | :---: | ------ |
+| [Spreading to Props](./spreading-to-props/README.md) |  3 min | [link](https://generalassembly.wistia.com/medias/60088fuqrv) | Using spread syntax to pass props.                                                 |
+| [Nested Components](./nested-components/README.md)   |  8 min | [link](https://generalassembly.wistia.com/medias/m5gbq8rsrr) | Creating more granular components and passing props from parents to grandchildren. |
+| **Total Level Up content**                           | 11 min |                                                              |                                                                                    |
 
 ## References
 
