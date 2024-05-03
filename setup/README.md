@@ -67,3 +67,19 @@ const App = () => {
 
 export default App;
 ```
+
+## Running the development server
+
+To start the development server and view our app in the browser, we'll use the following command: 
+
+```bash
+npm run dev
+```
+
+You should see that `Vite` is available on port number 5173: 
+
+```plaintext
+localhost:5173
+```
+
+Navigate there, and you should see the `<h1>` from our `App.jsx` component displayed!
