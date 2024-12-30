@@ -1,4 +1,7 @@
-# ![React Components - Spreading to Props](./assets/hero.png)
+<h1>
+  <span class="headline">React Components</span>
+  <span class="subhead">Spreading to Props</span>
+</h1>
 
 **Learning objective:** By the end of this lesson, students will be able to use JavaScript's spread syntax to pass props
 

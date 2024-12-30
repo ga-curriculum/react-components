@@ -1,4 +1,7 @@
-# ![React Components - Mapping Components with Data](./assets/hero.png)
+<h1>
+  <span class="headline">React Components</span>
+  <span class="subhead">Mapping Components with Data</span>
+</h1>
 
 **Learning objective:** By the end of this lesson, students will be able to pass data to a component inside of a `map()` array method.
 

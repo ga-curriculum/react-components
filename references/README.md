@@ -1,4 +1,7 @@
-# ![React Components - References](./assets/hero.png)
+<h1>
+  <span class="headline">React Components</span>
+  <span class="subhead">References</span>
+</h1>
 
 ## Lesson references
 

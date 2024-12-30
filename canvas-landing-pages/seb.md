@@ -1,4 +1,7 @@
-# ![React Components](../assets/hero.png)
+<h1>
+  <span class="prefix"></span>
+  <span class="headline">React Components</span>
+</h1>
 
 ## About
 

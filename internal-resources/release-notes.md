@@ -1,5 +1,36 @@
-# ![Release Notes](../assets/release-notes.png)
+<h1>
+  <span class="headline">React Components</span>
+  <span class="subhead">Release Notes</span>
+</h1>
 
-## Version 1.0 - Updates from legacy content
+## Version 1.1 - Dec 25, 2024
 
-This lecture is brand new lecture content!
+### Release details
+
+This release updates lecture code to use Vite version 6, and React version 19.
+
+#### Additions
+
+None.
+
+#### Changes
+
+- Update lecture code to use Vite version 6.
+- Update lecture code to use React version 19.
+- Update to use internal template version 2.
+
+#### Removals
+
+None.
+
+## Version 1.0 - New
+
+This module is a new addition to our content library.
+
+### Release details
+
+#### Additions
+
+#### Changes
+
+#### Removals

@@ -1,4 +1,7 @@
-# ![React Components - Nested Components](./assets/hero.png)
+<h1>
+  <span class="headline">React Components</span>
+  <span class="subhead">Nested Components</span>
+</h1>
 
 **Learning objective:** By the end of this lesson, learners will be able to break down a React component into smaller parts and understand the concept of passing `props` from a parent component to a grandchild component.
 

@@ -1,4 +1,7 @@
-# ![React Components - Passing Data with Props](./assets/hero.png)
+<h1>
+  <span class="headline">React Components</span>
+  <span class="subhead">Passing Data with Props</span>
+</h1>
 
 **Learning objective:** By the end of this lesson, students will be able to understand and implement the concept of passing data to components in React using props.
 

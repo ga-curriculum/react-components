@@ -1,4 +1,7 @@
-# ![React Components - Concepts](./assets/hero.png)
+<h1>
+  <span class="headline">React Components</span>
+  <span class="subhead">Concepts</span>
+</h1>
 
 **Learning objective:** By the end of this lesson, learners will understand the foundational concept of React as a component-based framework.
 

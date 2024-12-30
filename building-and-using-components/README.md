@@ -1,4 +1,7 @@
-# ![React Components - Building and Using Components](./assets/hero.png)
+<h1>
+  <span class="headline">React Components</span>
+  <span class="subhead">Building and Using Components</span>
+</h1>
 
 **Learning objective:** By the end of this lesson, learners will be able to understand and implement the concept of component nesting in React.
 

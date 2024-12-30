@@ -1,4 +1,7 @@
-# ![React Components - Structuring Components in React](./assets/hero.png)
+<h1>
+  <span class="headline">React Components</span>
+  <span class="subhead">Structuring Components in React</span>
+</h1>
 
 **Learning objective:** By the end of this lesson, students will be able to identify potential components within a web page's layout and understand how to structure these components effectively in a React application.
 

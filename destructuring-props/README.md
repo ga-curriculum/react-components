@@ -1,10 +1,13 @@
-# ![React Components - Destructring Props](./assets/hero.png)
+<h1>
+  <span class="headline">React Components</span>
+  <span class="subhead">Destructuring Props</span>
+</h1>
 
 **Learning objective:** By the end of this lesson, students will be able to understand how and why to destructure props in React.
 
 ## Destructuring
 
-Our work so far is great, but you'll notice that whenever we want to access a property on the `founder` object, we have to navigate through `props` repeatedly to get the data we need. Nothing is necessarily ***wrong*** with this, but you can imagine how this might become tedious, especially if we had even more objects nested inside  the `founder` object.
+Our work so far is great, but you'll notice that whenever we want to access a property on the `founder` object, we have to navigate through `props` repeatedly to get the data we need. Nothing is necessarily ***wrong*** with this, but you can imagine how this might become tedious, especially if we had even more objects nested inside the `founder` object.
 
 This is where [object destructuring](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#object_destructuring) comes into play.
 

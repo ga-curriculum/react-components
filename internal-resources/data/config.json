@@ -1,0 +1,404 @@
+{
+  "org": {
+    "friendlyName": "Modular Curriculum All Courses",
+    "name": "modular-curriculum-all-courses"
+  },
+  "repo": {
+    "friendlyName": "React Components",
+    "name": "react-components",
+    "type": "Lesson",
+    "about": "",
+    "starterCode": "",
+    "solutionCode": "",
+    "deployedSite": ""
+  },
+  "courses": [
+    {
+      "name": "rds",
+      "courseAcronym": "",
+      "courseFullName": "",
+      "logoUrl": "",
+      "microlessons": [
+        {
+          "friendlyName": "Setup",
+          "dirName": "setup",
+          "type": "Content",
+          "skill": "",
+          "learningObjective": "",
+          "videoUrl": "https://generalassembly.wistia.com/medias/2kmay76sx9",
+          "videoLengthInMinutes": 0,
+          "estimatedDeliveryTimeInMinutes": 0
+        },
+        {
+          "friendlyName": "Concepts",
+          "dirName": "concepts",
+          "type": "Content",
+          "skill": "",
+          "learningObjective": "",
+          "videoUrl": "https://generalassembly.wistia.com/medias/2y0hevacnc",
+          "videoLengthInMinutes": 0,
+          "estimatedDeliveryTimeInMinutes": 0
+        },
+        {
+          "friendlyName": "Structuring Components in React",
+          "dirName": "structuring-components-in-react",
+          "type": "Content",
+          "skill": "",
+          "learningObjective": "",
+          "videoUrl": "https://generalassembly.wistia.com/medias/e0ttdnbckm",
+          "videoLengthInMinutes": 0,
+          "estimatedDeliveryTimeInMinutes": 0
+        },
+        {
+          "friendlyName": "Building and Using Components",
+          "dirName": "building-and-using-components",
+          "type": "Content",
+          "skill": "",
+          "learningObjective": "",
+          "videoUrl": "https://generalassembly.wistia.com/medias/oiwqxk85t9",
+          "videoLengthInMinutes": 0,
+          "estimatedDeliveryTimeInMinutes": 0
+        },
+        {
+          "friendlyName": "Passing Data with Props",
+          "dirName": "passing-data-with-props",
+          "type": "Content",
+          "skill": "",
+          "learningObjective": "",
+          "videoUrl": "https://generalassembly.wistia.com/medias/lf1w39o3uv",
+          "videoLengthInMinutes": 0,
+          "estimatedDeliveryTimeInMinutes": 0
+        },
+        {
+          "friendlyName": "Reusing Components",
+          "dirName": "reusing-components",
+          "type": "Content",
+          "skill": "",
+          "learningObjective": "",
+          "videoUrl": "https://generalassembly.wistia.com/medias/ita2jifwqc",
+          "videoLengthInMinutes": 0,
+          "estimatedDeliveryTimeInMinutes": 0
+        },
+        {
+          "friendlyName": "Mapping Components with Data",
+          "dirName": "mapping-components-with-data",
+          "type": "Content",
+          "skill": "",
+          "learningObjective": "",
+          "videoUrl": "https://generalassembly.wistia.com/medias/exp406judg",
+          "videoLengthInMinutes": 0,
+          "estimatedDeliveryTimeInMinutes": 0
+        },
+        {
+          "friendlyName": "Destructuring Props",
+          "dirName": "destructuring-props",
+          "type": "Content",
+          "skill": "",
+          "learningObjective": "",
+          "videoUrl": "https://generalassembly.wistia.com/medias/0ueoi6t98r",
+          "videoLengthInMinutes": 0,
+          "estimatedDeliveryTimeInMinutes": 0
+        },
+        {
+          "friendlyName": "Spreading to Props",
+          "dirName": "spreading-to-props",
+          "type": "Level Up content",
+          "skill": "",
+          "learningObjective": "",
+          "videoUrl": "https://generalassembly.wistia.com/medias/60088fuqrv",
+          "videoLengthInMinutes": 0,
+          "estimatedDeliveryTimeInMinutes": 0
+        },
+        {
+          "friendlyName": "Nested Components",
+          "dirName": "nested-components",
+          "type": "Level Up content",
+          "skill": "",
+          "learningObjective": "",
+          "videoUrl": "https://generalassembly.wistia.com/medias/m5gbq8rsrr",
+          "videoLengthInMinutes": 0,
+          "estimatedDeliveryTimeInMinutes": 0
+        }
+      ],
+      "isHeaderShown": true,
+      "isHeaderModuleNavShown": true,
+      "isHeaderHomeNavShown": true,
+      "isHeaderMicrolessonNavShown": true,
+      "isHeaderMicrolessonVideoLinkShown": true,
+      "isHeaderNavSettingsShown": true,
+      "isFooterCopyrightShown": true,
+      "isFooterLessonNavShown": true,
+      "isStickyNavSettingShown": true,
+      "isStickyNavAllowed": true,
+      "isFixedNavAllowed": true,
+      "isStickyNavDefault": true,
+      "isStickyNavForcedDefault": false,
+      "isFixedNavForcedDefault": false,
+      "isDarkModeSettingShown": true,
+      "isDarkModeAllowed": true,
+      "isLightModeAllowed": true,
+      "isLightModeDefault": true,
+      "isLightModeForcedDefault": false,
+      "isDarkModeForcedDefault": false,
+      "isActivityTimeShown": true
+    },
+    {
+      "name": "seb",
+      "courseAcronym": "",
+      "courseFullName": "",
+      "logoUrl": "",
+      "microlessons": [
+        {
+          "friendlyName": "Setup",
+          "dirName": "setup",
+          "type": "Content",
+          "skill": "",
+          "learningObjective": "",
+          "videoUrl": "https://generalassembly.wistia.com/medias/2kmay76sx9",
+          "videoLengthInMinutes": 0,
+          "estimatedDeliveryTimeInMinutes": 0
+        },
+        {
+          "friendlyName": "Concepts",
+          "dirName": "concepts",
+          "type": "Content",
+          "skill": "",
+          "learningObjective": "",
+          "videoUrl": "https://generalassembly.wistia.com/medias/2y0hevacnc",
+          "videoLengthInMinutes": 0,
+          "estimatedDeliveryTimeInMinutes": 0
+        },
+        {
+          "friendlyName": "Structuring Components in React",
+          "dirName": "structuring-components-in-react",
+          "type": "Content",
+          "skill": "",
+          "learningObjective": "",
+          "videoUrl": "https://generalassembly.wistia.com/medias/e0ttdnbckm",
+          "videoLengthInMinutes": 0,
+          "estimatedDeliveryTimeInMinutes": 0
+        },
+        {
+          "friendlyName": "Building and Using Components",
+          "dirName": "building-and-using-components",
+          "type": "Content",
+          "skill": "",
+          "learningObjective": "",
+          "videoUrl": "https://generalassembly.wistia.com/medias/oiwqxk85t9",
+          "videoLengthInMinutes": 0,
+          "estimatedDeliveryTimeInMinutes": 0
+        },
+        {
+          "friendlyName": "Passing Data with Props",
+          "dirName": "passing-data-with-props",
+          "type": "Content",
+          "skill": "",
+          "learningObjective": "",
+          "videoUrl": "https://generalassembly.wistia.com/medias/lf1w39o3uv",
+          "videoLengthInMinutes": 0,
+          "estimatedDeliveryTimeInMinutes": 0
+        },
+        {
+          "friendlyName": "Reusing Components",
+          "dirName": "reusing-components",
+          "type": "Content",
+          "skill": "",
+          "learningObjective": "",
+          "videoUrl": "https://generalassembly.wistia.com/medias/ita2jifwqc",
+          "videoLengthInMinutes": 0,
+          "estimatedDeliveryTimeInMinutes": 0
+        },
+        {
+          "friendlyName": "Mapping Components with Data",
+          "dirName": "mapping-components-with-data",
+          "type": "Content",
+          "skill": "",
+          "learningObjective": "",
+          "videoUrl": "https://generalassembly.wistia.com/medias/exp406judg",
+          "videoLengthInMinutes": 0,
+          "estimatedDeliveryTimeInMinutes": 0
+        },
+        {
+          "friendlyName": "Destructuring Props",
+          "dirName": "destructuring-props",
+          "type": "Content",
+          "skill": "",
+          "learningObjective": "",
+          "videoUrl": "https://generalassembly.wistia.com/medias/0ueoi6t98r",
+          "videoLengthInMinutes": 0,
+          "estimatedDeliveryTimeInMinutes": 0
+        },
+        {
+          "friendlyName": "Spreading to Props",
+          "dirName": "spreading-to-props",
+          "type": "Level Up content",
+          "skill": "",
+          "learningObjective": "",
+          "videoUrl": "https://generalassembly.wistia.com/medias/60088fuqrv",
+          "videoLengthInMinutes": 0,
+          "estimatedDeliveryTimeInMinutes": 0
+        },
+        {
+          "friendlyName": "Nested Components",
+          "dirName": "nested-components",
+          "type": "Level Up content",
+          "skill": "",
+          "learningObjective": "",
+          "videoUrl": "https://generalassembly.wistia.com/medias/m5gbq8rsrr",
+          "videoLengthInMinutes": 0,
+          "estimatedDeliveryTimeInMinutes": 0
+        }
+      ],
+      "isHeaderShown": true,
+      "isHeaderModuleNavShown": true,
+      "isHeaderHomeNavShown": true,
+      "isHeaderMicrolessonNavShown": true,
+      "isHeaderMicrolessonVideoLinkShown": true,
+      "isHeaderNavSettingsShown": true,
+      "isFooterCopyrightShown": true,
+      "isFooterLessonNavShown": true,
+      "isStickyNavSettingShown": true,
+      "isStickyNavAllowed": true,
+      "isFixedNavAllowed": true,
+      "isStickyNavDefault": true,
+      "isStickyNavForcedDefault": false,
+      "isFixedNavForcedDefault": false,
+      "isDarkModeSettingShown": true,
+      "isDarkModeAllowed": true,
+      "isLightModeAllowed": true,
+      "isLightModeDefault": true,
+      "isLightModeForcedDefault": false,
+      "isDarkModeForcedDefault": false,
+      "isActivityTimeShown": true
+    },
+    {
+      "name": "fallback",
+      "courseAcronym": "",
+      "courseFullName": "",
+      "logoUrl": "",
+      "microlessons": [
+        {
+          "friendlyName": "Setup",
+          "dirName": "setup",
+          "type": "Content",
+          "skill": "",
+          "learningObjective": "",
+          "videoUrl": "https://generalassembly.wistia.com/medias/2kmay76sx9",
+          "videoLengthInMinutes": 0,
+          "estimatedDeliveryTimeInMinutes": 0
+        },
+        {
+          "friendlyName": "Concepts",
+          "dirName": "concepts",
+          "type": "Content",
+          "skill": "",
+          "learningObjective": "",
+          "videoUrl": "https://generalassembly.wistia.com/medias/2y0hevacnc",
+          "videoLengthInMinutes": 0,
+          "estimatedDeliveryTimeInMinutes": 0
+        },
+        {
+          "friendlyName": "Structuring Components in React",
+          "dirName": "structuring-components-in-react",
+          "type": "Content",
+          "skill": "",
+          "learningObjective": "",
+          "videoUrl": "https://generalassembly.wistia.com/medias/e0ttdnbckm",
+          "videoLengthInMinutes": 0,
+          "estimatedDeliveryTimeInMinutes": 0
+        },
+        {
+          "friendlyName": "Building and Using Components",
+          "dirName": "building-and-using-components",
+          "type": "Content",
+          "skill": "",
+          "learningObjective": "",
+          "videoUrl": "https://generalassembly.wistia.com/medias/oiwqxk85t9",
+          "videoLengthInMinutes": 0,
+          "estimatedDeliveryTimeInMinutes": 0
+        },
+        {
+          "friendlyName": "Passing Data with Props",
+          "dirName": "passing-data-with-props",
+          "type": "Content",
+          "skill": "",
+          "learningObjective": "",
+          "videoUrl": "https://generalassembly.wistia.com/medias/lf1w39o3uv",
+          "videoLengthInMinutes": 0,
+          "estimatedDeliveryTimeInMinutes": 0
+        },
+        {
+          "friendlyName": "Reusing Components",
+          "dirName": "reusing-components",
+          "type": "Content",
+          "skill": "",
+          "learningObjective": "",
+          "videoUrl": "https://generalassembly.wistia.com/medias/ita2jifwqc",
+          "videoLengthInMinutes": 0,
+          "estimatedDeliveryTimeInMinutes": 0
+        },
+        {
+          "friendlyName": "Mapping Components with Data",
+          "dirName": "mapping-components-with-data",
+          "type": "Content",
+          "skill": "",
+          "learningObjective": "",
+          "videoUrl": "https://generalassembly.wistia.com/medias/exp406judg",
+          "videoLengthInMinutes": 0,
+          "estimatedDeliveryTimeInMinutes": 0
+        },
+        {
+          "friendlyName": "Destructuring Props",
+          "dirName": "destructuring-props",
+          "type": "Content",
+          "skill": "",
+          "learningObjective": "",
+          "videoUrl": "https://generalassembly.wistia.com/medias/0ueoi6t98r",
+          "videoLengthInMinutes": 0,
+          "estimatedDeliveryTimeInMinutes": 0
+        },
+        {
+          "friendlyName": "Spreading to Props",
+          "dirName": "spreading-to-props",
+          "type": "Content",
+          "skill": "",
+          "learningObjective": "",
+          "videoUrl": "https://generalassembly.wistia.com/medias/60088fuqrv",
+          "videoLengthInMinutes": 0,
+          "estimatedDeliveryTimeInMinutes": 0
+        },
+        {
+          "friendlyName": "Nested Components",
+          "dirName": "nested-components",
+          "type": "Content",
+          "skill": "",
+          "learningObjective": "",
+          "videoUrl": "https://generalassembly.wistia.com/medias/m5gbq8rsrr",
+          "videoLengthInMinutes": 0,
+          "estimatedDeliveryTimeInMinutes": 0
+        }
+      ],
+      "isHeaderShown": true,
+      "isHeaderModuleNavShown": true,
+      "isHeaderHomeNavShown": true,
+      "isHeaderMicrolessonNavShown": true,
+      "isHeaderMicrolessonVideoLinkShown": true,
+      "isHeaderNavSettingsShown": true,
+      "isFooterCopyrightShown": true,
+      "isFooterLessonNavShown": true,
+      "isStickyNavSettingShown": true,
+      "isStickyNavAllowed": true,
+      "isFixedNavAllowed": true,
+      "isStickyNavDefault": true,
+      "isStickyNavForcedDefault": false,
+      "isFixedNavForcedDefault": false,
+      "isDarkModeSettingShown": true,
+      "isDarkModeAllowed": true,
+      "isLightModeAllowed": true,
+      "isLightModeDefault": true,
+      "isLightModeForcedDefault": false,
+      "isDarkModeForcedDefault": false,
+      "isActivityTimeShown": true
+    }
+  ]
+}

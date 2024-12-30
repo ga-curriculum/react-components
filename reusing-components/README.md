@@ -1,4 +1,7 @@
-# ![React Components - Reusing Components](./assets/hero.png)
+<h1>
+  <span class="headline">React Components</span>
+  <span class="subhead">Reusing Components</span>
+</h1>
 
 **Learning objective:** By the end of this lesson, learners will be able to understand the basic concepts of component reuse in React.
 

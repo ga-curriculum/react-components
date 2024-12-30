@@ -1,0 +1,74 @@
+import "https://pages.git.generalassemb.ly/modular-curriculum-all-courses/universal-resources-internal/static/v2/pkl/template.pkl" as Template
+
+// Add microlessons here, in the order they should be delivered
+
+setup = new Template.Microlesson {
+  friendlyName = "Setup"
+  dirName = "setup"
+  type = "Content"
+  videoUrl = "https://generalassembly.wistia.com/medias/2kmay76sx9"
+}
+
+concepts = new Template.Microlesson {
+  friendlyName = "Concepts"
+  dirName = "concepts"
+  type = "Content"
+  videoUrl = "https://generalassembly.wistia.com/medias/2y0hevacnc"
+}
+
+structuringComponentsInReact = new Template.Microlesson {
+  friendlyName = "Structuring Components in React"
+  dirName = "structuring-components-in-react"
+  type = "Content"
+  videoUrl = "https://generalassembly.wistia.com/medias/e0ttdnbckm"
+}
+
+buildingAndUsingComponents = new Template.Microlesson {
+  friendlyName = "Building and Using Components"
+  dirName = "building-and-using-components"
+  type = "Content"
+  videoUrl = "https://generalassembly.wistia.com/medias/oiwqxk85t9"
+}
+
+passingDataWithProps = new Template.Microlesson {
+  friendlyName = "Passing Data with Props"
+  dirName = "passing-data-with-props"
+  type = "Content"
+  videoUrl = "https://generalassembly.wistia.com/medias/lf1w39o3uv"
+}
+
+reusingComponents = new Template.Microlesson {
+  friendlyName = "Reusing Components"
+  dirName = "reusing-components"
+  type = "Content"
+  videoUrl = "https://generalassembly.wistia.com/medias/ita2jifwqc"
+}
+
+mappingComponentsWithData = new Template.Microlesson {
+  friendlyName = "Mapping Components with Data"
+  dirName = "mapping-components-with-data"
+  type = "Content"
+  videoUrl = "https://generalassembly.wistia.com/medias/exp406judg"
+}
+
+destructuringProps = new Template.Microlesson {
+  friendlyName = "Destructuring Props"
+  dirName = "destructuring-props"
+  type = "Content"
+  videoUrl = "https://generalassembly.wistia.com/medias/0ueoi6t98r"
+}
+
+spreadingToProps = new Template.Microlesson {
+  friendlyName = "Spreading to Props"
+  dirName = "spreading-to-props"
+  type = "Content"
+  videoUrl = "https://generalassembly.wistia.com/medias/60088fuqrv"
+}
+
+nestedComponents = new Template.Microlesson {
+  friendlyName = "Nested Components"
+  dirName = "nested-components"
+  type = "Content"
+  videoUrl = "https://generalassembly.wistia.com/medias/m5gbq8rsrr"
+}
+
